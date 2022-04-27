@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<h1>生き物のカテゴリー管理</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Order</th>
+      <th>Picture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td>カテゴリー</td>
+        <td><%= category.name %></td>
+        <td><%= category.order %></td>
+        <td><%= category.picture %></td>
+        <td><%= link_to '編集', edit_category_path(category) %></td>
+        <td><%= link_to '削除', category, method: :delete, data: { confirm: '消すと全部消えるよ?' } %></td>
+        <td><%= link_to '分類2 追加', second_new_path(category) %></td>
+
+      </tr>
+
+    <% category.category_seconds.each do |category_second| %>
+      <tr>
+        <td></td>
+        <td><%= category_second.name %></td>
+        <td><%= category_second.order %></td>
+        <td></td>
+        <td><%= link_to '編集', edit_category_second_path(category_second) %></td>
+        <td><%= link_to '削除', category_second, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '生き物 追加', creature_new_path(category_second) %></td>
+      </tr>
+    <% end %>
+
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '分類1 を追加', new_category_path %><br>
+<%= link_to '分類2 を追加', "/category_seconds/new"%><br>
+<%= link_to '水族館 編集画面', "/aquaria" %><br>
+<%= link_to '写真撮った人 編集画面', "/photo_bies" %><br>
+<%= link_to '料金一覧編集画面 一旦スルーで', "/fees" %><br>
+<%= link_to '生き物編集画面', "/creatures" %><br>
+<%= link_to 'コラム書いた人編集画面', "/columned_bies" %><br>
+<%= link_to '写真一括登録', "/photo_sets" %><br>
+<%= link_to '写真編集画面', "/photos" %><br>
+
+

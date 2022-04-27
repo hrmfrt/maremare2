@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>和名:</strong>
+  <%= @creature.japanese_name %>
+</p>
+
+<p>
+  <strong>学名:</strong>
+  <%= @creature.scientific_name %>
+</p>
+
+<p>
+  <strong>情報:</strong>
+  <%= @creature.information %>
+</p>
+
+<%= link_to 'Edit', edit_creature_path(@creature) %> |
+<%= link_to 'Back', "/categories" %>

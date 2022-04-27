@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Photo Sets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @photo_sets.each do |photo_set| %>
+      <tr>
+        <td><%= photo_set.name %></td>
+        <td><%= link_to '編集 登録した画像が全部消えてしまうので基本的には使わない', edit_photo_set_path(photo_set) %></td>
+        <td><%= link_to '削除 間違って登録したときだけ', photo_set, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    
+
+      <% if photo_set.image_sets.attached? %>
+        <% photo_set.image_sets.each do |set| %>
+        <%= photo_set.id%>
+        <%= image_tag set.variant(resize_to_limit: [100, 100]) %>
+    <% end %>
+  <% end %>
+
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新規追加', new_photo_set_path %>
+<%= link_to 'まれじめんと Top', maregiment_path %>

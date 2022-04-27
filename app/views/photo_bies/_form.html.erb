@@ -1,0 +1,22 @@
+<%= form_with(model: photo_by) do |form| %>
+  <% if photo_by.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(photo_by.errors.count, "error") %> prohibited this photo_by from being saved:</h2>
+
+      <ul>
+        <% photo_by.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :"撮影者の名前 (個人の名前は入れない)" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

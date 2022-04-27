@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>水族館一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>名前</th>
+      <th>読み方</th>
+      <th>所在県</th>
+      <th>住所</th>
+      <th>ホームページ</th>
+      <th>その他情報</th>
+      <th>順番</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aquaria.each do |aquarium| %>
+      <tr>
+        <td><%= aquarium.name %></td>
+        <td><%= aquarium.reading %></td>
+        <td><%= aquarium.prefecture %></td>
+        <td><%= aquarium.place %></td>
+        <td><%= aquarium.homepage %></td>
+        <td><%= aquarium.information %></td>
+        <td><%= aquarium.order %></td>
+        <td><%= link_to '確認', aquarium %></td>
+        <td><%= link_to '編集', edit_aquarium_path(aquarium) %></td>
+        <td><%= link_to '削除', aquarium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '料金情報追加', edit_aquarium_path(aquarium) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '水族館情報追加', new_aquarium_path %>

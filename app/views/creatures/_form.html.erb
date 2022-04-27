@@ -1,0 +1,41 @@
+<%= form_with(model: creature) do |form| %>
+  <% if creature.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(creature.errors.count, "error") %> prohibited this creature from being saved:</h2>
+
+      <ul>
+        <% creature.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :和名 %>
+    <%= form.text_field :japanese_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :学名 %>
+    <%= form.text_field :scientific_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :生き物情報 %>
+    <%= form.text_area :information %>
+  </div>
+  
+
+  <%# カテゴリー2を選択する　%>
+  <%= form.label :"カテゴリー2 選択" %>
+  <%= form.collection_select :category_second_id, CategorySecond.all, :id, :name%><br><br>
+    <%# 書いた人を選択する　%>
+  <%= form.label :"説明文書いた人" %>
+  <%= form.collection_select :columned_by_id, ColumnedBy.all, :id, :name%><br><br>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

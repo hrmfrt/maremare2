@@ -1,0 +1,2 @@
+module MaregimentHelper
+end

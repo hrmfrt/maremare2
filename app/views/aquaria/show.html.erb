@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @aquarium.name %>
+</p>
+
+<p>
+  <strong>Reading:</strong>
+  <%= @aquarium.reading %>
+</p>
+
+<p>
+  <strong>Prefecture:</strong>
+  <%= @aquarium.prefecture %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @aquarium.place %>
+</p>
+
+<p>
+  <strong>Information:</strong>
+  <%= @aquarium.information %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @aquarium.order %>
+</p>
+
+<%= link_to 'Edit', edit_aquarium_path(@aquarium) %> |
+<%= link_to 'Back', aquaria_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @category_second.name %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @category_second.picture %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @category_second.order %>
+</p>
+
+<%= link_to 'Edit', edit_category_second_path(@category_second) %> |
+<%= link_to 'Back', category_seconds_path %>

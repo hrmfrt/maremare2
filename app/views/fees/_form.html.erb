@@ -1,0 +1,27 @@
+<%= form_with(model: fee) do |form| %>
+  <% if fee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fee.errors.count, "error") %> prohibited this fee from being saved:</h2>
+
+      <ul>
+        <% fee.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :分類名 %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :価格 %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

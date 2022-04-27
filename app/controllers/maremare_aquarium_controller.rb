@@ -1,0 +1,2 @@
+class MaremareAquariumController < ApplicationController
+end

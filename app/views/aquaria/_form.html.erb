@@ -1,0 +1,52 @@
+<%= form_with(model: aquarium) do |form| %>
+  <% if aquarium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(aquarium.errors.count, "error") %> prohibited this aquarium from being saved:</h2>
+
+      <ul>
+        <% aquarium.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reading %>
+    <%= form.text_field :reading %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prefecture %>
+    <%= form.text_field :prefecture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :place %>
+    <%= form.text_field :place %>
+  </div>
+
+    <div class="field">
+    <%= form.label :homepage %>
+    <%= form.text_field :homepage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :information %>
+    <%= form.text_field :information %>
+  </div>
+
+  <div class="field">
+    <%= form.label :order %>
+    <%= form.number_field :order %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

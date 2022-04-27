@@ -1,0 +1,22 @@
+<%= form_with(model: columned_by) do |form| %>
+  <% if columned_by.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(columned_by.errors.count, "error") %> prohibited this columned_by from being saved:</h2>
+
+      <ul>
+        <% columned_by.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :"名前 (ニックネームでいれること)" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

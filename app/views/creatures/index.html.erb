@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>生き物情報一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>和名</th>
+      <th>学名</th>
+      <th>説明文</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @cat.each do |cat| %>
+        <tr>
+        <td><%= cat.name%></td>
+        </tr>
+  <% cat.category_seconds.each do |cat2| %>
+        <tr>
+        <td></td>
+        <td><%= cat2.name%></td>
+        </tr>
+    <% cat2.creatures.each do |creature| %>
+      <tr>
+        
+        <td><%= creature.japanese_name %></td>
+        <td><%= creature.scientific_name %></td>
+        <td><%= creature.information %></td>
+        <td><%= link_to '確認', creature %></td>
+        <td><%= link_to '編集', edit_creature_path(creature) %></td>
+        <td><%= link_to '削除', creature, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    <% end %>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '生き物情報追加', new_creature_path %><br>
+<%= link_to 'まれじめんと Top', maregiment_path %>

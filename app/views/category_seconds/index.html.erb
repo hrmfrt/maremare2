@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Category Seconds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @category_seconds.each do |category_second| %>
+      <tr>
+        <td><%= category_second.name %></td>
+        <td><%= category_second.order %></td>
+        <td><%= link_to 'Show', category_second %></td>
+        <td><%= link_to 'Edit', edit_category_second_path(category_second) %></td>
+        <td><%= link_to 'Destroy', category_second, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Category Second', new_category_second_path %>
+

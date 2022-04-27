@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>説明文書いてくれた人</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>名前</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @columned_bies.each do |columned_by| %>
+      <tr>
+        <td><%= columned_by.name %></td>
+        <td><%= link_to '編集', edit_columned_by_path(columned_by) %></td>
+        <td><%= link_to '削除', columned_by, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新規追加', new_columned_by_path %><br>
+<%= link_to 'まれじめんと top', maregiment_path %>

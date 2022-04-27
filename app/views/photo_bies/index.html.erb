@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>写真撮った人 登録画面</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>名前</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @photo_bies.each do |photo_by| %>
+      <tr>
+        <td><%= photo_by.name %></td>
+        <td><%= link_to '編集', edit_photo_by_path(photo_by) %></td>
+        <td><%= link_to '削除', photo_by, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新規追加', new_photo_by_path %><br>
+<%= link_to 'まれじめんと Top', maregiment_path %>

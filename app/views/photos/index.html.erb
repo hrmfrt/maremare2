@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Photos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Photo</th>
+      <th>Caption</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @photos.each do |photo| %>
+      <tr>
+        <td><%#= photo.picture %></td>
+        <td><%= photo.caption %></td>
+        <td><%#= image_tag(photo.picture_url) %></td>
+
+            <%# photo[:picture].each do |image| %>
+            <%#= f.check_box :image_ids, {multiple: true}, image.id, false %>
+             <%#= image_tag image, size:"100x100" %> <br>
+            <%# end %>
+
+        
+
+        <td><%= link_to 'Show', photo %></td>
+        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'まれじめんと Top', maregiment_path %>

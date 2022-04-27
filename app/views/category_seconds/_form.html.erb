@@ -1,0 +1,29 @@
+<%= form_with(model: category_second) do |form| %>
+  <% if category_second.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(category_second.errors.count, "error") %> prohibited this category_second from being saved:</h2>
+
+      <ul>
+        <% category_second.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :名前 %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :順番 %>
+    <%= form.number_field :order %>
+  </div>
+
+  <%= form.hidden_field :category_id, value: params[:id]%>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
