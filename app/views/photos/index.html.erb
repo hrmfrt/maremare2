@@ -17,12 +17,22 @@
       <tr>
         <td><%#= photo.picture %></td>
         <td><%= photo.caption %></td>
+        
         <td><%#= image_tag(photo.picture_url) %></td>
+        <td><%= photo.creature.japanese_name%></td>
+        <td><%= image_tag PhotoSet.find(photo.photo_set_id).image_sets.find(photo.photo_num).variant( resize: "300" ) %></td>
+        <td><%= photo.photo_set_id%></td>
+        <td><%= photo.photo_num%></td>
 
-            <%# photo[:picture].each do |image| %>
-            <%#= f.check_box :image_ids, {multiple: true}, image.id, false %>
-             <%#= image_tag image, size:"100x100" %> <br>
-            <%# end %>
+
+
+        <%# photo[:picture].each do |image| %>
+        <%#= f.check_box :image_ids, {multiple: true}, image.id, false %>
+        <%#= image_tag image, size:"100x100" %> <br>
+        <%# end %>
+        <%#これで個別の画像を抜くことができる。%>
+        <%#= image_tag PhotoSet.find(13).image_sets.find(46)%>
+        <%#= image_tag PhotoSet.find(photo.photo_set_id).image_sets.find(photo.photo_num)%>
 
         
 
