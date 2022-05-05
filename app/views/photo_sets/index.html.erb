@@ -18,8 +18,10 @@
     <% @photo_sets.each do |photo_set| %>
       <tr>
         <td><%= photo_set.name %></td>
-        <td><%= link_to '編集 登録した画像が全部消えてしまうので基本的には使わない', edit_photo_set_path(photo_set) %></td>
-        <td><%= link_to '削除 間違って登録したときだけ', photo_set, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%#= 編集画面はややこしくなるので削除。削除機能だけ残しておく。>
+        <td><%#= link_to '編集 登録した画像が全部消えてしまうので基本的には使わない', edit_photo_set_path(photo_set) %></td>
+        <td><%= link_to '削除 間違って登録したときだけ', photo_set, method: :delete, data: { confirm: '消していいですか?' } %></td>
+
       </tr>
     
 

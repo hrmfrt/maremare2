@@ -2,22 +2,21 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @photo_sets.name%>
-  <%= @photo_sets.ids%>
+  <%= @photo_sets.find(params[:id]).name%>
 </p>
 
 <p>
   <strong>Portrait:</strong>
-  <% if @photo_sets.image_sets.attached? %>
-    <% @photo_sets.image_sets.each do |set| %>
-      <%= set.id%>
-      <%= image_tag set.variant(resize_to_limit: [100, 100]) %>
+  <% if @photo_sets.find(params[:id]).image_sets.attached? %>
+    <% @photo_sets.find(params[:id]).image_sets.each do |photo| %>
+      <%= image_tag photo.variant(resize_to_limit: [100, 100]) %>
     <% end %>
   <% end %>
 </p>
 
+
 <p>にゃん</p>
 
 
-<%= link_to 'Edit', edit_photo_set_path(@photo_set) %> |
+<%= link_to 'Edit', edit_photo_set_path(@photo_sets) %> |
 <%= link_to 'Back', photo_sets_path %>

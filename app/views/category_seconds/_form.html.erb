@@ -21,7 +21,9 @@
     <%= form.number_field :order %>
   </div>
 
-  <%= form.hidden_field :category_id, value: params[:id]%>
+  <%# カテゴリー2を選択する　%>
+  <%= form.label :"カテゴリー1 選択" %>
+  <%= form.collection_select :category_id, Category.all, :id, :name%><br><br>
 
   <div class="actions">
     <%= form.submit %>
