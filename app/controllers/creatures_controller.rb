@@ -59,6 +59,12 @@ class CreaturesController < ApplicationController
     end
   end
 
+  def import
+    # fileはtmpに自動で一時保存される
+    Creature.import(params[:file])
+    redirect_to creatures_url
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_creature

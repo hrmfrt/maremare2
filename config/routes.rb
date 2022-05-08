@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   resources :aquaria do
     collection { post :import }
   end
-  resources :creatures
+  resources :creatures do
+    collection { post :import }
+  end
   resources :category_seconds
   resources :categories
   

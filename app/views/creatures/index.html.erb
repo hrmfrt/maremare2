@@ -42,3 +42,12 @@
 
 <%= link_to '生き物情報追加', new_creature_path %><br>
 <%= link_to 'まれじめんと Top', maregiment_path %>
+
+<br>
+<br>
+
+<p>【csvからデータをインポートする。】</p>
+<%= form_tag import_creatures_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "インポート" %>
+<% end %>
