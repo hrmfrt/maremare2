@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :photo_bies
   resources :fees
   resources :photos
-  resources :aquaria
+  resources :aquaria do
+    collection { post :import }
+  end
   resources :creatures
   resources :category_seconds
   resources :categories

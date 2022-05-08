@@ -1,3 +1,5 @@
+<!--csv の導入はここを参考にした。 https://qiita.com/okhrt/items/3e98ba496bcf8c50ac64-->
+
 <p id="notice"><%= notice %></p>
 
 <h1>水族館一覧</h1>
@@ -36,5 +38,12 @@
 </table>
 
 <br>
+
+<p>csvからデータをインポートする。</p>
+<%= form_tag import_aquaria_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "インポート" %>
+<% end %>
+
 
 <%= link_to '水族館情報追加', new_aquarium_path %>

@@ -59,10 +59,7 @@ class PhotoSetsController < ApplicationController
 
   # DELETE /photo_sets/1 or /photo_sets/1.json
   def destroy
-   
     PhotoSet.destroy(params[:id])
-    #@photo_sets.destroy
-
     respond_to do |format|
       format.html { redirect_to photo_sets_url, notice: "Photo set was successfully destroyed." }
       format.json { head :no_content }
