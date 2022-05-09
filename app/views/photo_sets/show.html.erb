@@ -1,22 +1,33 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @photo_sets.find(params[:id]).name%>
+  <strong>名前</strong>
+  <%= @photo_set.name %>
 </p>
 
-<p>
-  <strong>Portrait:</strong>
-  <% if @photo_sets.find(params[:id]).image_sets.attached? %>
-    <% @photo_sets.find(params[:id]).image_sets.each do |photo| %>
-      <%= image_tag photo.variant(resize_to_limit: [100, 100]) %>
+    <% @photos.each do |photo| %>
+    <table>
+      <tr>
+
+
+        <%#画像を一枚ずつ表示%>
+        <td><%= image_tag PhotoSet.find(photo.photo_set_id).image_sets.find(photo.photo_num).variant( resize: "300" ) %></td>
+        <% if photo.caption == nil then %>
+        <td>No Caption</td>
+        <% else %>
+        <td><%= photo.caption %></td>
+        <% end %>
+        <td><%= photo.creature.japanese_name%></td>
+        <td><%= link_to '編集', edit_photo_path(photo) %></td>
+        <td><%= link_to '削除', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    </table>
     <% end %>
-  <% end %>
-</p>
+
 
 
 <p>にゃん</p>
 
 
-<%= link_to 'Edit', edit_photo_set_path(@photo_sets) %> |
-<%= link_to 'Back', photo_sets_path %>
+<%= link_to '戻る', photo_sets_path %><br>
+<%= link_to 'まれじめんとTop', maregiment_path %>

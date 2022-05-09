@@ -8,6 +8,8 @@ class PhotoSetsController < ApplicationController
 
   # GET /photo_sets/1 or /photo_sets/1.json
   def show
+    @photo_set = PhotoSet.find(params[:id])
+    @photos = Photo.where(photo_set_id: params[:id])
   end
 
   # GET /photo_sets/new

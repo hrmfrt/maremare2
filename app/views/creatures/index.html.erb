@@ -14,14 +14,7 @@
 
   <tbody>
   <% @cat.each do |cat| %>
-        <tr>
-        <td><%= cat.name%></td>
-        </tr>
   <% cat.category_seconds.each do |cat2| %>
-        <tr>
-        <td></td>
-        <td><%= cat2.name%></td>
-        </tr>
     <% cat2.creatures.each do |creature| %>
       <tr>
         

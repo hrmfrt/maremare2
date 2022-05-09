@@ -23,14 +23,7 @@
         <td><%= link_to '削除 間違って登録したときだけ', photo_set, method: :delete, data: { confirm: '消していいですか?' } %></td>
 
       </tr>
-    
-
-      <% if photo_set.image_sets.attached? %>
-        <% photo_set.image_sets.each do |set| %>
-        <%= photo_set.id%>
-        <%= image_tag set.variant(resize_to_limit: [100, 100]) %>
-    <% end %>
-  <% end %>
+  
 
   <% end %>
   </tbody>
