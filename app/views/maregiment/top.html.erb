@@ -38,7 +38,8 @@
         <td class="category2"><%= link_to '削除', category_second, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td class="category2"><%= link_to '生き物 追加', creature_new_path(category_second) %></td>
       </tr>
-      <% category_second.creatures.each do |creature| %>
+      <!--生き物は50音順で表示する-->
+      <% category_second.creatures.order("japanese_name").each do |creature| %>
       <tr>
         <td></td>
         <td><%= creature.japanese_name %></td>
