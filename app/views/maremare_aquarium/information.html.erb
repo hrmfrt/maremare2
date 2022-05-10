@@ -8,9 +8,13 @@
 
         <%= render partial: "header" %>
         <%= render partial: "topslide" %>
+        
 
         <div id="wrapper">
 
+        <%= link_to "にゃん", dictionary_path(1), remote: true, class: "favorite_btn" %>
+
+<%= render partial: "dictionary" %>
 
         <%= render partial: "sidebar" %>
 

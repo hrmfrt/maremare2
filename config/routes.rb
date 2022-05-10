@@ -22,4 +22,8 @@ Rails.application.routes.draw do
   get "MaremareAquarium/column", to: "maremare_aquarium#column", as:"column"
   get "MaremareAquarium/writer", to: "maremare_aquarium#writer", as:"writer"
   get "MaremareAquarium/information", to: "maremare_aquarium#information", as:"information"
+
+  get "MaremareAquarium/:id", to: "maremare_aquarium#dictionary", as:"dictionary"
+
+
 end
