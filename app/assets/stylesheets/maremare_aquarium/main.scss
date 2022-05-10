@@ -1,0 +1,481 @@
+@charset "UTF-8";
+
+
+/*バックグラウンド (パターン画像に変更予定)*/
+body {
+    background-image: image-url("background.jpeg");
+}
+
+/* チャプター：全体の設定 */
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-size: 14px;
+    font-family: Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif;
+}
+
+a {
+    color: #333;
+}
+
+a:visited {
+    color: #333;
+}
+
+a:hover {
+    color: #333;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* チャプター：マージン */
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+    line-height: 1.6;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+/* チャプター：見出しの装飾 */
+#main h2 {
+    font-size: 20px;
+    padding: 8px 22px;
+    border-radius: 2px;
+    border: 1px solid #956840;
+}
+
+#main h3 {
+    font-size: 16px;
+    height:23px;
+    border-left: solid 3px #fa9786;
+    padding: 0px 7px 5px 8px;
+    margin-left:20px;
+}
+
+/* チャプター：ヘッダー */
+header {
+    width: 1100px;
+    height:80px;
+    margin: 0 auto;
+    background-color:#FFFFFF;
+    margin-top:10px;
+    margin-bottom: 10px;
+    padding:0 auto;
+}
+
+
+/*リンクボタン部分のCSS*/
+
+.header{
+    float:left;
+}
+.logo_area{
+    width:400px;
+    height:80px;
+    padding-top:5px;
+    padding-left: 30px;
+}
+
+.link_area{
+    width: 700px;
+    height:80px;
+    display: flex;
+    padding-top:45px;
+    padding-bottom:10px;
+    padding-right:0px;
+    padding-left:30px
+}
+
+.link_area li{
+    width:20%;
+
+}
+
+header ul{
+    width:1100px;
+    height:80px;
+    list-style:none;
+    padding:0;
+}
+
+.btn{
+    
+    text-align: center;
+}
+
+header ul li {
+  
+    height:40px;
+    width:100%;
+    margin-right: 2%;
+  
+}
+
+
+header .logo{
+    width:100%;
+    background-color: #CC9999;
+}
+
+
+
+
+header .link-btn{
+    width:110px;
+    height:25px;
+    text-align: center;
+    color: #fff;
+    background-image: url(./background.jpeg);
+    border-radius: 100vh;
+
+}
+.page_logo{
+    width:100%;
+    height:100%;
+}
+
+.logo_area img{
+    width:360px;
+    height:70px;
+    object-fit: cover;
+}
+
+header a {
+    display: block;
+    text-decoration:none;
+    padding: 4px 5px;
+    font-size:14px;
+
+}
+
+
+header ul li :hover{
+  color: #fff;
+  background: #f56500;
+}
+
+a.btn--radius {
+   border-radius: 100vh;
+}
+
+
+.poke_pic { margin: 0 0 50px;}
+.poke_pic img { width: 100%; height: 30vw; object-fit:cover;}
+.poke_pic .slick-next { right: 20px; z-index: 99;}
+.poke_pic .slick-prev { left: 15px; z-index: 100;}
+
+/* チャプター：メインビジュアル */
+
+/* ポケモンのカルーセル*/
+#main_visual {
+    width:1100px;
+    background-color:black;
+    margin: 0 auto;
+}
+
+.poke_pic{
+   width:100%;
+   margin: 0 auto;
+
+}
+
+/*ポケモンの画像を並べる部分*/
+#wrapper {
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 10px;
+}
+
+#main {
+    width: 800px;
+    margin-left:10px;
+    background-color: #FFFFFF;
+    border-radius: 1vh;
+    padding:10px
+}
+
+
+/*ボタンのスタイル変更*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+
+
+.pic-category{
+    font-size: 17px;
+    font-weight:bold ;
+    
+}
+
+
+
+/*動物のボタン*/
+.pic-button {
+    display      : inline-block;
+    width:130px;
+    height:130px;
+    border-radius: 50%;                  /* 角丸 */
+    box-shadow   : 6px 6px 3px #666666;  /* 影の設定 */
+    cursor       : pointer;              /* カーソル形状 */
+    transition   : .3s;                  /* なめらか変化 */
+}
+
+.pic-button:hover {
+    box-shadow   : none;                 /* 影の設定 */
+                     /* 角丸 */
+}
+
+
+/* チャプター：メインエリア */
+
+#main_area h2{
+    width:90%px;
+}
+
+
+.main_area{
+    margin-bottom:30px;
+}
+
+
+.lists {
+    display:flex;
+    flex-wrap:wrap;
+}
+
+
+.point{
+    width:33%;
+
+}
+
+.point figure{
+    width:33%;
+    height:130px;
+    
+
+}
+
+.point img {
+    width:200px;
+    height:120px;
+    object-fit:cover;
+    margin-left:80px;
+    margin-top:50px;
+}
+
+.point p{
+    width:60%;
+    margin:auto;
+
+}
+
+
+
+
+
+
+/* ここまでがカードのメインエリア*/
+
+#news ul {
+    list-style: none;
+    padding: 0;
+}
+
+#news li {
+    margin-bottom: 10px;
+}
+
+#news li a {
+    margin-left: 15px;
+}
+
+/* チャプター：サイドバー */
+#instagram-embed-0{
+    min-width:100px !important;
+}
+
+#sidebar {
+    width: 280px;
+    background-color:#FFFFFF;
+    border-radius: 1vh;
+}
+
+#side_banner ul {
+    list-style: none;
+    padding: 0;
+}
+
+#side_banner {
+    margin-bottom: 30px;
+    text-align: center;
+    
+
+}
+
+#side_banner h2 {
+    width:80%;
+    background-color: #956840;
+    margin:0 auto;
+    margin-top:10px;
+    border-radius: 2vh;
+    color: #fff;
+    padding: 7px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#side_banner img{
+    width:50%;
+    padding-bottom:20px
+}
+
+
+/* チャプター：フッター */
+footer #footer_navi ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #956840;
+    text-align: center;
+}
+
+footer #footer_navi {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+}
+
+footer #footer_navi li {
+    display: inline;
+    border-left: solid 1px #333;
+    margin-left: 8px;
+    padding-left: 8px;
+    font-size: smaller;
+}
+
+footer #footer_navi li:last-child {
+    border-right: solid 1px #333;
+    padding: 0 8px;
+}
+
+footer small {
+    display: block;
+    padding: 8px 0;
+    color: #fff;
+}
+
+/*以下モーダル用のCSS
+
+
+
+/*パソコン用のレスポンシブデザイン*/
+@media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用*/
+#menu-bg {
+    background-color:#FF0000;
+}
+}
+
+/*タブレット用*/
+@media screen and (max-width: 767px) { /*ウィンドウ幅が最大767pxまでの場合に適用*/
+    #menu-bg {
+    background-color: #FF0000; /*赤色*/
+    }
+    #main {
+        width:100%;
+    }
+
+    #sidebar{
+        display:none;
+    }
+}
+
+/*スマホ用のメディアクエリ*/
+@media screen and (max-width: 479px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
+    #menu-bg {
+    background-color: #00FF00; /*緑色*/
+    width:100%;
+    }
+
+    body{
+        width:100%;
+    }
+    #main_visual{
+        width:100%;
+    }
+    header{
+        width:100%;
+        display:none;
+        
+    }
+    #wrapper{
+        width:100%;
+        margin:0 auto;
+    }
+    #main{
+        width:93%;
+        margin:auto;
+    }
+
+    #sidebar{
+        display:none;
+    }
+
+
+/* チャプター：メインエリア */
+
+#main_area h2{
+    width:90%px;
+}
+
+
+.main_area{
+    margin-bottom:30px;
+}
+
+#main h3{
+    font-size:13px;
+    height:25px;
+    margin-left:5px;
+    margin-bottom:0px;
+    border-left:solid 3px #fa9786;
+    padding-left:5px;
+
+}
+#main figure{
+    margin:0px;
+    margin-top:15px;
+}
+
+#main{
+    margin-bottom:10px;
+}
+
+
+
+
+}

@@ -3,5 +3,11 @@
 
  //= link test/test.css
 
- //= link main2.js
+ //= link maremare_aquarium/main.js
+ //= link maremare_aquarium/slick.js
+
  //= link maregiment/top.css
+
+
+ //= link maremare_aquarium/main.css
+ //= link maremare_aquarium/slick.css

@@ -1,0 +1,71 @@
+<%= stylesheet_link_tag "maremare_aquarium/main.css", media: "all", 'data-turbolinks-track': "reload" %>
+<%= javascript_include_tag 'maremare_aquarium/slick.js' %>
+<%= javascript_include_tag 'maremare_aquarium/main.js' %>
+<%= stylesheet_link_tag "maremare_aquarium/slick.css", media: "all", 'data-turbolinks-track': "reload" %>
+
+
+    <body>
+
+        <%= render partial: "header" %>
+        <%= render partial: "topslide" %>
+
+        <div id="wrapper">
+
+
+        <%= render partial: "sidebar" %>
+
+            <!--ここからメイン-->
+            <div id="main">
+                <!--クリックしたら画像が表示されるところ-->
+                <section id="main_area"></section>
+
+                <!--メインエリア-->
+                <section>
+                    <h2>いんふぉめーしょん</h2>
+                    <div>
+
+                        <br>
+                        <br>
+                        <br>
+                        インフォメーションを載せるよ
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                        インフォメーションってなんだろう
+                        <br>
+                        <br>
+                        <br>
+
+                    </div>
+                </section>
+            
+
+
+     
+        
+                <section id="news">
+                    <h2>お知らせ</h2>
+                    <ul>
+                        <li>
+                            <span>2022/1/28</span>
+                            <a href="">ホームページを開設しました！！</a>
+                        </li>
+                    </ul>
+                </section>
+            
+            </div>
+            <!--メインここまで-->
+            <!--ここからサイド-->
+
+            <!--サイドここまで-->
+        </div>
+        <!--wrapperここまで-->
+        <%= render partial: "footer" %>
+
+
+    </body>
+</html>
