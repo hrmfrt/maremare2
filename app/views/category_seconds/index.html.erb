@@ -26,5 +26,11 @@
 
 <br>
 
+<%= form_tag import_category_seconds_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "インポート" %>
+<% end %>
+<br>
+
 <%= link_to 'New Category Second', new_category_second_path %>
 

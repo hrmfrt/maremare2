@@ -58,6 +58,12 @@ class CategorySecondsController < ApplicationController
     end
   end
 
+  def import
+    # fileはtmpに自動で一時保存される
+    CategorySecond.import(params[:file])
+    redirect_to category_seconds_url
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_category_second

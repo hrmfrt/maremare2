@@ -43,6 +43,12 @@
 
 <br>
 
+<%= form_tag import_categories_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "インポート" %>
+<% end %>
+<br>
+
 <%= link_to '新しい分類を追加', new_category_path %>
 <%= link_to '水族館編集画面', "/aquaria" %>
 <%= link_to '写真撮った人編集画面', "/photo_bies" %>
