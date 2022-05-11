@@ -1,0 +1,8 @@
+<!--魚図鑑用のボタンパーシャル-->
+<div class="button-container">
+  <% @categories.each do |category| %>
+    <%= link_to dictionary_path(4), remote: true do %>
+      <button href="" id="" class="small-btn"><%= image_tag(category.picture_url, class:"pic-button") if category.picture.present?%>
+    <% end %>
+    <p class="pic-category"><%= category.name%></p>
+<% end %>

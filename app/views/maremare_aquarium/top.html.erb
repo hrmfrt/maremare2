@@ -17,6 +17,7 @@
 
             <!--ここからメイン-->
             <div id="main">
+            <%= render partial: "picbutton" %>
             
                 <div class="button-container">                
                     <button href="" id="fish" class="large-btn"><img class="pic-button" src ="./button_pic/S__115630115_0.jpg"><p class="pic-category"></p></button><p class="pic-category_info">クマノミ<br>フグ<br>カワハギ<br>ダンゴウオ</p>
@@ -40,6 +41,9 @@
 
                 <!--クリックしたら画像が表示されるところ-->
                 <section id="main_area"></section>
+
+                <!--モーダルやらなんちゃらを入れる部分-->
+                <div id="dictionary-wrapper"></div>
 
                 <!-- モーダル本体 -->
                 <div class="modal-container">

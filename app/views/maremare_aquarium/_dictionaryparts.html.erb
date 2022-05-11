@@ -1,2 +1,30 @@
-<p><%= @ponyo.japanese_name%></p>
+<section id="main_area">
+  <div class="large_section">
+    <h2 class="large_category_name"><%= @category.name %></h2>
+
+    <% @category.category_seconds.each do |category_second| %>
+    <div class="small_section">
+      <h2 class="small_categories"><%= category_second.name %></h2>
+      <div class="lists">
+
+        <% category_second.creatures.order("japanese_name").each do |creature| %>
+          <div class="point">
+            <h3><%= creature.japanese_name%></h3>
+            <figure>
+              <%= image_tag PhotoSet.find(Photo.find_by(creature_id: creature.id).photo_set_id).image_sets.find(Photo.find_by(creature_id: creature.id).photo_num).variant(resize: "300") %>
+            </figure>
+
+
+            <%# Photo.where(creature_id: creature.id).each do |photo|%>
+              <%#= photo.id %>
+            <%# end%>
+
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+</section>
 
