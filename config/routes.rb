@@ -33,7 +33,9 @@ Rails.application.routes.draw do
   get "MaremareAquarium/writer", to: "maremare_aquarium#writer", as:"writer"
   get "MaremareAquarium/information", to: "maremare_aquarium#information", as:"information"
 
+  #modal表示のためのAjax処理用
   get "MaremareAquarium/dictionary/:id", to: "maremare_aquarium#dictionary", as:"dictionary"
+  get "MaremareAquarium/modal/:id", to: "maremare_aquarium#modal", as:"modal"
 
 
 end

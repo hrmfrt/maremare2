@@ -1,8 +1,8 @@
 <%= stylesheet_link_tag "maremare_aquarium/main.css", media: "all", 'data-turbolinks-track': "reload" %>
+<%= stylesheet_link_tag "maremare_aquarium/dictionary.css", media: "all", 'data-turbolinks-track': "reload" %>
+<%= stylesheet_link_tag "maremare_aquarium/slick.css", media: "all", 'data-turbolinks-track': "reload" %>
 <%= javascript_include_tag 'maremare_aquarium/slick.js' %>
 <%= javascript_include_tag 'maremare_aquarium/main.js' %>
-<%= stylesheet_link_tag "maremare_aquarium/slick.css", media: "all", 'data-turbolinks-track': "reload" %>
-
 
 
     <body>
@@ -17,35 +17,16 @@
 
             <!--ここからメイン-->
             <div id="main">
-            <%= render partial: "picbutton" %>
             
-                <div class="button-container">                
-                    <button href="" id="fish" class="large-btn"><img class="pic-button" src ="./button_pic/S__115630115_0.jpg"><p class="pic-category"></p></button><p class="pic-category_info">クマノミ<br>フグ<br>カワハギ<br>ダンゴウオ</p>
-                    <button href="" id="fish_sec" class="large-btn"><img class="pic-button" src ="./button_pic/IMG_4644.jpeg"><p class="pic-category"></p></button><p class="pic-category_info">チョウチョウウオ・その他</p>
-                    <button href="" id="fish_thr" class="large-btn"><img class="pic-button" src ="./button_pic/IMG_4712.jpeg"><p class="pic-category"></p></button><p class="pic-category_info">淡水魚</p>
-                    <button href="" id="dolphin" class="small-btn"><img class="pic-button" src ="./button_pic/IMG_1562.JPG"><p class="pic-category">イルカ</p></button>
-                    <button href="" id="sharkray" class="small-btn"><img class="pic-button" src ="./button_pic/242609.jpg"><p class="pic-category">サメ・エイ</p></button>
-                    <button href="" id="penguin" class="small-btn"><img class="pic-button" src ="./button_pic/S__3538998.jpg"><p class="pic-category">ペンギン</p></button>   
-                    <button href="" id="seaturtle" class="small-btn"><img class="pic-button" src ="./button_pic/IMG_1185.jpg"><p class="pic-category">ウミガメ</p></button>
-                    <button href="" id="jellyfish" class="small-btn"><img class="pic-button" src ="./button_pic/LINE_ALBUM_220113_3.jpg"><p class="pic-category">くらげ</p></button>
-                    <button href="" id="bird" class="small-btn"><img class="pic-button" src ="./button_pic/IMG_0931.jpg"><p class="pic-category">鳥類</p></button>
-                    <button href="" id="shrimp" class="small-btn"><img class="pic-button" src ="./button_pic/S__29310996.jpg"><p class="pic-category">甲殻類</p></button>
-                    <button href="" id="octopus" class="small-btn"><img class="pic-button" src ="./button_pic/20220115_120243.jpg"><p class="pic-category">イカ・タコ</p></button>
-                    <button href="" id="animal" class="small-btn"><img class="pic-button" src ="./button_pic/IMG_3886.JPG"><p class="pic-category">動物</p></button>
-                    <button href="" id="flog" class="small-btn"><img class="pic-button" src ="./button_pic/IMG_8196.jpg"><p class="pic-category">両生類/爬虫類</p></button>
-                    <button href="" id="seaurchin" class="small-btn"><img class="pic-button" src ="./button_pic/IMG_3293.jpg"><p class="pic-category">棘皮動物</p></button>
-                    <button href="" id="cram" class="small-btn"><img class="pic-button" src ="./button_pic/S__115630100.jpg"><p class="pic-category">かい</p></button>
-                    <button href="" id="algae" class="small-btn"><img class="pic-button" src ="./button_pic/seagrape.jpg"><p class="pic-category">海藻</p></button>
-                    <button href="" id="others" class="small-btn"><img class="pic-button" src ="./button_pic/LINE_ALBUM_220119_2.jpg"><p class="pic-category">その他</p></button>
-                </div>
-
+ 
+                <%= render partial: "picbutton" %>
                 <!--クリックしたら画像が表示されるところ-->
-                <section id="main_area"></section>
-
+                <section id="main_area">
+                
                 <!--モーダルやらなんちゃらを入れる部分-->
                 <div id="dictionary-wrapper"></div>
 
-                <!-- モーダル本体 -->
+                                <!-- モーダル本体 -->
                 <div class="modal-container">
                     <div class="modal-body">
                         <!-- 閉じるボタン -->
@@ -56,6 +37,11 @@
                         </div>
                     </div>
                 </div>
+                
+
+                </section>
+
+
 
                 
                 <section id="news">
@@ -74,4 +60,4 @@
 
 
     </body>
-</html>
+

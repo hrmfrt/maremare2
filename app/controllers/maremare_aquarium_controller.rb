@@ -18,5 +18,8 @@ class MaremareAquariumController < ApplicationController
     @category = Category.find(params[:id])
   end
 
+  def modal
+    @creaturephotos = Photo.where(creature_id: params[:id])
+  end
 
 end

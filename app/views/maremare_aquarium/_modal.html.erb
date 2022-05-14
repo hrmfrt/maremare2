@@ -1,0 +1,21 @@
+<!--modal-contentの中身をこれにかえる-->
+
+<div class="modal-content">
+
+  <div class="modal-pic">
+    <!--code_pic該当部分以下を繰り返す-->
+    <div>
+      <% @creaturephotos.each do |photo| %>
+      <td><%= image_tag PhotoSet.find(photo.photo_set_id).image_sets.find(photo.photo_num).variant( resize: "300" ) %></td>
+      <p class="caption"><%= photo.caption %></p>
+      <%end%>
+    </div>
+  </div>
+  <!--code_info 該当部分-->
+  <table align="left" valign="top">
+    <tr><th class="ti">和名</th><th>:</th><th><%#ここに和名を入れる %></tr>
+    <tr><th class="ti">学名</th><th>:</th><th><%#ここに学名を入れる %></tr>
+    <tr><th class="ti">説明</th><th>:</th><th><%#ここに説明を入れる %></tr>
+  </table>
+  
+</div>
