@@ -1,6 +1,7 @@
 <%= stylesheet_link_tag "maremare_aquarium/main.css", media: "all", 'data-turbolinks-track': "reload" %>
 <%= stylesheet_link_tag "maremare_aquarium/dictionary.css", media: "all", 'data-turbolinks-track': "reload" %>
 <%= stylesheet_link_tag "maremare_aquarium/slick.css", media: "all", 'data-turbolinks-track': "reload" %>
+<%= stylesheet_link_tag "maremare_aquarium/slick-theme.css", media: "all", 'data-turbolinks-track': "reload" %>
 <%= javascript_include_tag 'maremare_aquarium/slick.js' %>
 <%= javascript_include_tag 'maremare_aquarium/main.js' %>
 
@@ -12,21 +13,18 @@
         <%= render partial: "topslide" %>
 
         <div id="wrapper">
-
-        <%= render partial: "sidebar" %>
-
+            <%= render partial: "sidebar" %>
             <!--ここからメイン-->
             <div id="main">
-            
- 
                 <%= render partial: "picbutton" %>
                 <!--クリックしたら画像が表示されるところ-->
                 <section id="main_area">
-                
+                    <div id="creatures"></div>
+                </section>
                 <!--モーダルやらなんちゃらを入れる部分-->
                 <div id="dictionary-wrapper"></div>
 
-                                <!-- モーダル本体 -->
+                <!-- モーダル本体 -->
                 <div class="modal-container">
                     <div class="modal-body">
                         <!-- 閉じるボタン -->

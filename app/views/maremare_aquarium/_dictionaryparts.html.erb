@@ -1,3 +1,4 @@
+<section id="main_area">
   <div class="large_section">
     <h2 class="large_category_name"><%= @category.name %></h2>
 
@@ -9,9 +10,9 @@
         <% category_second.creatures.order("japanese_name").each do |creature| %>
           <div class="point">
             <h3><%= creature.japanese_name%></h3>
-            <figure>
+            <figure class="modal-open">
               <%= link_to modal_path(creature.id), remote: true do %>
-              <%= image_tag PhotoSet.find(Photo.find_by(creature_id: creature.id).photo_set_id).image_sets.find(Photo.find_by(creature_id: creature.id).photo_num).variant(resize: "300") %>
+                <%= image_tag PhotoSet.find(Photo.find_by(creature_id: creature.id).photo_set_id).image_sets.find(Photo.find_by(creature_id: creature.id).photo_num).variant(resize: "300")%>
               <% end %>
             </figure>
           </div>
@@ -20,4 +21,4 @@
     </div>
     <% end %>
   </div>
-
+</section>

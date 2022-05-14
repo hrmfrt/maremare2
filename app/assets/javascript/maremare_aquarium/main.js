@@ -76,11 +76,7 @@ function modal() {
         close = $('.modal-close'),
         container = $('.modal-container');
 
-    //開くボタンをクリックしたらモーダルを表示する
-    open.on('click', function () {
-        container.addClass('active');
-        return false;
-    });
+
 
     //閉じるボタンをクリックしたらモーダルを閉じる
     close.on('click', function () {
@@ -93,6 +89,15 @@ function modal() {
             container.removeClass('active');
         }
     });
+
+    $('.modal-pic').slick({
+        infinite: true, //スライドのループ有効化
+        dots: true, //ドットのナビゲーションを表示
+        centerMode: true, //要素を中央寄せ
+        centerPadding: '0%', //両サイドの見えている部分のサイズ
+        autoplay: false, //自動再生
+        arrows: false,//矢印
+    })
 };
 
 
@@ -158,17 +163,13 @@ function modal_html() {
         $('.modal-content').html(code_html_modal
         );
 
-        //生き物画像用のモーダル
-        $('.modal-pic').slick({
-            infinite: true, //スライドのループ有効化
-            dots: true, //ドットのナビゲーションを表示
-            centerMode: true, //要素を中央寄せ
-            centerPadding: '0%', //両サイドの見えている部分のサイズ
-            autoplay: false, //自動再生
-            arrows: false,//矢印
-        });
 
     });
 
 
 };
+
+
+
+
+modal()
