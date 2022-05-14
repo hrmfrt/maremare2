@@ -26,7 +26,7 @@
   </div>
 
   <%# 書いた人を選択する　%>
-  <p>コラムを書いた人</p>
+  <p>生き物</p>
   <%= form.collection_select :creature_id, Creature.all, :id, :japanese_name%>
   <%# 撮った人を選択する　%>
   <p>写真を撮影した人</p>
@@ -34,6 +34,7 @@
   <%# 水族館を選択する　%>
   <p>水族館</p>
   <%= form.collection_select :aquarium_id, Aquarium.all, :id, :name%>
+
 
 
   <div class="actions">
