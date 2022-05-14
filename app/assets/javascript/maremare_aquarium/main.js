@@ -7,6 +7,15 @@ $(document).ready(function () {
         centerPadding: '10%', //両サイドの見えている部分のサイズ
         autoplay: true, //自動再生
     });
+
+    $('.modal-pic').slick({
+        infinite: true, //スライドのループ有効化
+        dots: true, //ドットのナビゲーションを表示
+        centerMode: true, //要素を中央寄せ
+        centerPadding: '0%', //両サイドの見えている部分のサイズ
+        autoplay: false, //自動再生
+        arrows: true,//矢印
+    });
 });
 
 
@@ -66,6 +75,18 @@ $(function () {
     $("test").load("test.html");
     console.log("test")
 });
+
+function slick() {
+    $('.modal-pic').slick({
+        infinite: true, //スライドのループ有効化
+        dots: true, //ドットのナビゲーションを表示
+        centerMode: true, //要素を中央寄せ
+        centerPadding: '0%', //両サイドの見えている部分のサイズ
+        autoplay: false, //自動再生
+        arrows: false,//矢印
+    })
+
+};
 
 
 function modal() {
