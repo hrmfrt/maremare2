@@ -13,3 +13,4 @@
  //= link maremare_aquarium/dictionary.css
  //= link maremare_aquarium/slick.css
  //= link maremare_aquarium/slick-theme.css
+

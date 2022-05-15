@@ -62,3 +62,6 @@ gem "carrierwave"
 gem "activerecord-import"
 
 gem "roo"
+
+# サジェスト機能用
+gem "jquery-ui-rails"
