@@ -8,14 +8,16 @@
       <div class="lists">
 
         <% category_second.creatures.order("japanese_name").each do |creature| %>
-          <div class="point">
-            <h3><%= creature.japanese_name%></h3>
-            <figure class="modal-open">
-              <%= link_to modal_path(creature.id), remote: true do %>
-                <%= image_tag PhotoSet.find(Photo.find_by(creature_id: creature.id).photo_set_id).image_sets.find(Photo.find_by(creature_id: creature.id).photo_num).variant(resize: "300")%>
-              <% end %>
-            </figure>
-          </div>
+          <% if Photo.find_by(creature_id: creature.id).present? %>
+            <div class="point">
+              <h3><%= creature.japanese_name%></h3>
+              <figure class="modal-open">
+                <%= link_to modal_path(creature.id), remote: true do %>
+                  <%= image_tag PhotoSet.find(Photo.find_by(creature_id: creature.id).photo_set_id).image_sets.find(Photo.find_by(creature_id: creature.id).photo_num).variant(resize: "300")%>
+                <% end %>
+              </figure>
+            </div>
+          <% end %>
         <% end %>
       </div>
     </div>
