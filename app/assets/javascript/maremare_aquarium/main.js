@@ -1,3 +1,4 @@
+console.log("読み込み確認")
 
 $(document).ready(function () {
     $('.poke_pic').slick({
