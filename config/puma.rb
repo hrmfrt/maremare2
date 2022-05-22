@@ -41,3 +41,10 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart
+
+
+# puma起動時に Puma, Nginxでソケット通信を行うためにpuma.sockを生成(言葉わかんにゃい)
+bind "unix://#{Rails.root}/tmp/sockets/puma.sock"
+
+ # デーモン化 Pumaをバックグラウンドで動かすときに使うらしい すごい名前だね
+daemonize true
