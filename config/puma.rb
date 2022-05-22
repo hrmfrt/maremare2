@@ -15,7 +15,7 @@ worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
 
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
 #
-port ENV.fetch("PORT") { 3000 }
+#port ENV.fetch("PORT") { 3000 }
 
 # Specifies the `environment` that Puma will run in.
 #
@@ -47,4 +47,4 @@ plugin :tmp_restart
 bind "unix://#{Rails.root}/tmp/sockets/puma.sock"
 
  # デーモン化 Pumaをバックグラウンドで動かすときに使うらしい すごい名前だね
-daemonize true
+# daemonize true
