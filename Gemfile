@@ -65,3 +65,11 @@ gem "roo"
 
 # サジェスト機能用
 gem "jquery-ui-rails"
+
+
+# Capistrano
+group :development do
+  gem 'capistrano'
+  gem 'ed25519'
+  gem 'bcrypt_pbkdf'
+end
