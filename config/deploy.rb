@@ -2,7 +2,7 @@
 lock "~> 3.17.0"
 
 set :application, "maremare2"
-set :repo_url, "https://github.com/hrmfrt/maremare2.git"
+set :repo_url, "https://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:@github.com/hrmfrt/maremare2.git"
 
 
 # Default branch is :master
