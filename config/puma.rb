@@ -19,7 +19,7 @@ worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
 
 # Specifies the `environment` that Puma will run in.
 #
-environment ENV.fetch("RAILS_ENV") { "development" }
+environment ENV.fetch("RAILS_ENV") { "production" }
 
 # Specifies the `pidfile` that Puma will use.
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
@@ -44,7 +44,7 @@ plugin :tmp_restart
 
 
 # puma起動時に Puma, Nginxでソケット通信を行うためにpuma.sockを生成(言葉わかんにゃい)
-bind "unix://#{Rails.root}/tmp/sockets/puma.sock"
+bind "unix:///var/www/html/maremare2/tmp/sockets/puma.sock"
 
  # デーモン化 Pumaをバックグラウンドで動かすときに使うらしい すごい名前だね
 # daemonize true
