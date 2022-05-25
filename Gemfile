@@ -73,3 +73,5 @@ group :development do
   gem 'ed25519'
   gem 'bcrypt_pbkdf'
 end
+
+gem "sd_notify"
