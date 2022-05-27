@@ -1,6 +1,10 @@
-<h1>Editing Aquarium</h1>
+<%= stylesheet_link_tag "maregiment/bootstrap.min.css", media: "all", 'data-turbolinks-track': "reload" %>
+<%= javascript_include_tag 'Bootstrap/bootstrap.min.js' %>
+<div style="padding: 20px">
+
+<h1>水族館情報編集</h1>
 
 <%= render 'form', aquarium: @aquarium %>
 
-<%= link_to 'Show', @aquarium %> |
-<%= link_to 'Back', aquaria_path %>
+<%= link_to 'まれじめんと', maregiment_path %> |
+<%= link_to '戻る', aquaria_path %>

@@ -11,20 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :名前 %>
-    <%= form.text_field :name %>
+  <div class="form-group form-horizontal">
+    <%= form.label :名前, {class: "col-sm-3 control-label"}  %>
+    <%= form.text_field :name, {class: "col-sm-6 form-control"}   %>
   </div>
 
-  <div class="field">
-    <%= form.label :順番 %>
-    <%= form.number_field :order %>
+  <div class="form-group form-horizontal">
+    <%= form.label :順番, {class: "col-sm-3 control-label"}  %>
+    <%= form.number_field :order, {class: "col-sm-6 form-control"}   %>
   </div>
 
   <%# カテゴリー2を選択する　%>
-  <%= form.label :"カテゴリー1 選択" %>
-  <%= form.collection_select :category_id, Category.all, :id, :name%><br><br>
-
+  <div class=" form-group form-horizontal">
+    <%= form.label :"カテゴリー1 選択", {class: "col-sm-3 control-label"}   %>
+    <%= form.collection_select :category_id, Category.all, :id, :name %><br><br>
+  </div>
   <div class="actions">
     <%= form.submit %>
   </div>

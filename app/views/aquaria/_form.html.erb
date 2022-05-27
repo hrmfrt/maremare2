@@ -10,43 +10,43 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-group form-horizontal">
+    <%= form.label :"水族館名" , {class: "col-sm-3 control-label"} %>
+    <%= form.text_field :name, {class: "col-sm-6 form-control"}  %>
   </div>
 
-  <div class="field">
-    <%= form.label :reading %>
-    <%= form.text_field :reading %>
+  <div class="form-group form-horizontal">
+    <%= form.label :"よみかた", {class: "col-sm-3 control-label"} %>
+    <%= form.text_field :reading, {class: "col-sm-6 form-control"}  %>
   </div>
 
-  <div class="field">
-    <%= form.label :prefecture %>
-    <%= form.text_field :prefecture %>
+  <div class="form-group form-horizontal">
+    <%= form.label :"所在県", {class: "col-sm-3 control-label"} %>
+    <%= form.text_field :prefecture, {class: "col-sm-6 form-control"}  %>
   </div>
 
-  <div class="field">
-    <%= form.label :place %>
-    <%= form.text_field :place %>
+  <div class="form-group form-horizontal">
+    <%= form.label :"住所", {class: "col-sm-3 control-label"} %>
+    <%= form.text_field :place, {class: "col-sm-6 form-control"}  %>
   </div>
 
-    <div class="field">
-    <%= form.label :homepage %>
-    <%= form.text_field :homepage %>
+    <div class="form-group form-horizontal">
+    <%= form.label :"ホームページ", {class: "col-sm-3 control-label"} %>
+    <%= form.text_field :homepage, {class: "col-sm-6 form-control"}  %>
   </div>
 
-  <div class="field">
-    <%= form.label :information %>
-    <%= form.text_field :information %>
+  <div class="form-group form-horizontal">
+    <%= form.label :"その他情報", {class: "col-sm-3 control-label"} %>
+    <%= form.text_field :information, {class: "col-sm-6 form-control"}  %>
   </div>
 
-  <div class="field">
-    <%= form.label :order %>
-    <%= form.number_field :order %>
+  <div class="form-group form-horizontal">
+    <%= form.label :order, {class: "col-sm-3 control-label"} %>
+    <%= form.number_field :order, {class: "col-sm-6 form-control"}  %>
   </div>
-
+  <br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :"Update", class: "btn btn-outline-secondary" %>
   </div>
+  
 <% end %>

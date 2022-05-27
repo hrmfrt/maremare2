@@ -8,6 +8,9 @@
 
  //= link maregiment/top.css
 
+ //= link maregiment/bootstrap.min.css
+ //= link Bootstrap/bootstrap.min.js
+
 
  //= link maremare_aquarium/main.css
  //= link maremare_aquarium/dictionary.css

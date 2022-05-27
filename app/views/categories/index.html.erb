@@ -1,3 +1,16 @@
+<%= stylesheet_link_tag "maregiment/bootstrap.min.css", media: "all", 'data-turbolinks-track': "reload" %>
+<%= javascript_include_tag 'Bootstrap/bootstrap.min.js' %>
+<div style="padding: 20px">
+
+<%= link_to "まれじめんと", maregiment_path %>
+<%= link_to 'カテゴリー１', "categories" %> | 
+<%= link_to '水族館情報', "/aquaria" %> | 
+<%= link_to '撮影者', "/photo_bies" %> | 
+<%= link_to '料金', "/fees" %> | 
+<%= link_to '生き物', "/creatures" %> | 
+<%= link_to 'ライター', "/columned_bies" %>
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>生き物のカテゴリー管理</h1>
@@ -49,11 +62,6 @@
 <% end %>
 <br>
 
-<%= link_to '新しい分類を追加', new_category_path %>
-<%= link_to '水族館編集画面', "/aquaria" %>
-<%= link_to '写真撮った人編集画面', "/photo_bies" %>
-<%= link_to '料金一覧編集画面', "/fees" %>
-<%= link_to '生き物編集画面', "/creatures" %>
-<%= link_to 'コラム書いた人編集画面', "/columned_bies" %>
+
 
 
