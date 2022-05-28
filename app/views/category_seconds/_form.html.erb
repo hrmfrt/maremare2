@@ -24,7 +24,7 @@
   <%# カテゴリー2を選択する　%>
   <div class=" form-group form-horizontal">
     <%= form.label :"カテゴリー1 選択", {class: "col-sm-3 control-label"}   %>
-    <%= form.collection_select :category_id, Category.all, :id, :name %><br><br>
+    <%= form.collection_select :category_id, Category.all, :id, :name, { prompt: false }, class:"form-control form-control-sm col-lg-5" %><br><br>
   </div>
   <div class="actions">
     <%= form.submit %>

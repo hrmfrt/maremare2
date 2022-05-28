@@ -1,20 +1,25 @@
-<p id="notice"><%= notice %></p>
+<%= render './maregiment/maregiment_header'%>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+<div class="form_wrapper" style="padding:20px">
 
-<p>
-  <strong>Picture:</strong>
-  <%= @category.picture %>
-   <%= image_tag(@category.picture_url) if @category.picture.present? %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Order:</strong>
-  <%= @category.order %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @category.name %>
+  </p>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', maregiment_path %>
+  <p>
+    <strong>Picture:</strong>
+    <%= @category.picture %>
+    <%= image_tag(@category.picture_url) if @category.picture.present? %>
+  </p>
+
+  <p>
+    <strong>Order:</strong>
+    <%= @category.order %>
+  </p>
+
+  <%= link_to 'Edit', edit_category_path(@category) %> |
+  <%= link_to 'Back', maregiment_path %>
+</div>

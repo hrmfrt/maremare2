@@ -11,25 +11,26 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :"名前 【日付_水族館_撮影者】 にするとわかりやすい)", {class: "col-sm-3 control-label"}  %>
+    <%= form.label :"名前 【日付_水族館_撮影者】 にするとわかりやすい", {class: "col-sm-5 control-label"}  %>
     <%= form.text_field :name, {class: "col-sm-6 form-control"}   %>
   </div>
 
-  <div class="field">
+  <div class="form-group form-horizontal">
     <%= form.label :写真選択, {class: "col-sm-3 control-label"}  %>
-    <%= form.file_field :image_sets, direct_upload: true, multiple: true, {class: "col-sm-6 form-control"}   %>
+    <%= form.file_field :image_sets, direct_upload: true, multiple: true,class: "filestyle col-sm-8" %>
   </div>
 
-  <%# 書いた人を選択する　%>
-  <%= form.label :生き物の名前, {class: "col-sm-3 control-label"}  %>
-  <%= form.collection_select :creature_id, Creature.all, :id, :japanese_name%><br><br>
+  <div class="form-group form-horizontal">
+    <%= form.label :生き物の名前, {class: "col-sm-3 control-label"}  %>
+    <%= form.collection_select :creature_id, Creature.all, :id, :japanese_name, { prompt: false }, class:"form-control form-control-sm col-lg-5"%>
+  </div>
 
   <%# 撮った人を選択する　%>
   <%= form.label :写真撮った人, {class: "col-sm-3 control-label"}  %>
-  <%= form.collection_select :photo_by_id, PhotoBy.all, :id, :name%><br><br>
+  <%= form.collection_select :photo_by_id, PhotoBy.all, :id, :name, { prompt: false }, class:"form-control form-control-sm col-lg-5"%>
   <%# 撮った人を選択する　%>
   <%= form.label :水族館, {class: "col-sm-3 control-label"}  %>
-  <%= form.collection_select :aquarium_id, Aquarium.all, :id, :name%><br><br>
+  <%= form.collection_select :aquarium_id, Aquarium.all, :id, :name, { prompt: false }, class:"form-control form-control-sm col-lg-5"%>
 
   <div class="actions">
     <%= form.submit :"Update", class: "btn btn-outline-secondary" %>

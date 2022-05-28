@@ -1,6 +1,10 @@
-<h1>Editing Category</h1>
+<%= render './maregiment/maregiment_header'%>
 
-<%= render 'form', category: @category %>
+<div class="form_wrapper" style="padding:20px">
+  <h1>Editing Category</h1>
 
-<%= link_to 'Show', @category %> |
-<%= link_to 'Back', categories_path %>
+  <%= render 'form', category: @category %>
+
+  <%= link_to 'Show', @category %> |
+  <%= link_to 'Back', categories_path %>
+</div>

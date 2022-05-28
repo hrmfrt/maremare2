@@ -1,5 +1,10 @@
-<h1>Editing Creature</h1>
+<%= render './maregiment/maregiment_header'%>
+<div class="form_wrapper" style="padding:20px">
 
-<%= render 'form', creature: @creature %>
+  <h1>生き物情報編集</h1>
 
-<%= link_to '戻る', creatures_path %>
+  <%= render 'form', creature: @creature %>
+
+  <%= link_to '戻る', creatures_path %>
+
+</div>

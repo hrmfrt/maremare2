@@ -1,7 +1,10 @@
 <%= render './maregiment/maregiment_header'%>
 
-<h1>生き物情報の登録</h1>
 
-<%= render 'form', creature: @creature %>
+<div class="form_wrapper" style="padding:20px">
+  <h1>生き物情報の登録</h1>
 
-<%= link_to 'Back', "/categories" %>
+  <%= render 'form', creature: @creature %>
+
+  <%= link_to 'Back', "/creatures" %>
+</div>

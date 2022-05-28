@@ -1,7 +1,8 @@
 <%= render './maregiment/maregiment_header'%>
+<div class="form_wrapper" style="padding:20px">
+  <h1>新規写真 一括登録</h1>
 
-<h1>新規写真 一括登録</h1>
+  <%= render 'form', photo_set: @photo_set %>
 
-<%= render 'form', photo_set: @photo_set %>
-
-<%= link_to '戻る', maregiment_path %>
+  <%= link_to '戻る', maregiment_path %>
+</div>

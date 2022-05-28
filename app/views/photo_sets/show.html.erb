@@ -1,35 +1,36 @@
 <%= render './maregiment/maregiment_header'%>
+<div class="form_wrapper" style="padding:20px">
+  <p id="notice"><%= notice %></p>
 
-<p id="notice"><%= notice %></p>
+  <p>
+    <strong>名前</strong>
+    <%= @photo_set.name %>
+  </p>
 
-<p>
-  <strong>名前</strong>
-  <%= @photo_set.name %>
-</p>
-
-    <% @photos.each do |photo| %>
-    <table>
-      <tr>
-
-
-        <%#画像を一枚ずつ表示%>
-        <td><%= image_tag PhotoSet.find(photo.photo_set_id).image_sets.find(photo.photo_num).variant( resize: "300" ) %></td>
-        <% if photo.caption == nil then %>
-        <td>No Caption</td>
-        <% else %>
-        <td><%= photo.caption %></td>
-        <% end %>
-        <td><%= photo.creature.japanese_name%></td>
-        <td><%= link_to '編集', edit_photo_path(photo) %></td>
-        <td><%= link_to '削除', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    </table>
-    <% end %>
+      <% @photos.each do |photo| %>
+      <table>
+        <tr>
 
 
+          <%#画像を一枚ずつ表示%>
+          <td><%= image_tag PhotoSet.find(photo.photo_set_id).image_sets.find(photo.photo_num).variant( resize: "300" ) %></td>
+          <% if photo.caption == nil then %>
+          <td>No Caption</td>
+          <% else %>
+          <td><%= photo.caption %></td>
+          <% end %>
+          <td><%= photo.creature.japanese_name%></td>
+          <td><%= link_to '編集', edit_photo_path(photo) %></td>
+          <td><%= link_to '削除', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      </table>
+      <% end %>
 
-<p>にゃん</p>
 
 
-<%= link_to '戻る', photo_sets_path %><br>
-<%= link_to 'まれじめんとTop', maregiment_path %>
+  <p>にゃん</p>
+
+
+  <%= link_to '戻る', photo_sets_path %><br>
+  <%= link_to 'まれじめんとTop', maregiment_path %>
+</div>

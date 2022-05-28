@@ -1,7 +1,8 @@
 <%= render './maregiment/maregiment_header'%>
+<div class="form_wrapper" style="padding:20px">
+  <h1>New Photo By</h1>
 
-<h1>New Photo By</h1>
+  <%= render 'form', photo_by: @photo_by %>
 
-<%= render 'form', photo_by: @photo_by %>
-
-<%= link_to '戻る', maregiment_path %>
+  <%= link_to '戻る', "/photo_bies" %>
+</div>

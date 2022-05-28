@@ -1,67 +1,54 @@
-<%= stylesheet_link_tag "maregiment/bootstrap.min.css", media: "all", 'data-turbolinks-track': "reload" %>
-<%= javascript_include_tag 'Bootstrap/bootstrap.min.js' %>
-<div style="padding: 20px">
+<%= render './maregiment/maregiment_header'%>
 
-<%= link_to "まれじめんと", maregiment_path %>
-<%= link_to 'カテゴリー１', "categories" %> | 
-<%= link_to '水族館情報', "/aquaria" %> | 
-<%= link_to '撮影者', "/photo_bies" %> | 
-<%= link_to '料金', "/fees" %> | 
-<%= link_to '生き物', "/creatures" %> | 
-<%= link_to 'ライター', "/columned_bies" %>
+<div class="form_wrapper" style="padding:20px">
+  <p id="notice"><%= notice %></p>
 
+  <h1>生き物のカテゴリー管理</h1>
 
-<p id="notice"><%= notice %></p>
-
-<h1>生き物のカテゴリー管理</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Order</th>
-      <th>Picture</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @categories.each do |category| %>
+  <table>
+    <thead>
       <tr>
-        <td>カテゴリー</td>
-        <td><%= category.name %></td>
-        <td><%= category.order %></td>
-        <td><%= category.picture %></td>
-        <td><%= link_to '編集', edit_category_path(category) %></td>
-        <td><%= link_to '削除', category, method: :delete, data: { confirm: '消すと全部消えるよ?' } %></td>
-        <td><%= link_to '分類2 追加', second_new_path(category) %></td>
-
+        <th>Name</th>
+        <th>Order</th>
+        <th>Picture</th>
+        <th colspan="3"></th>
       </tr>
+    </thead>
 
-    <% category.category_seconds.each do |category_second| %>
-      <tr>
-        <td></td>
-        <td><%= category_second.name %></td>
-        <td><%= category_second.order %></td>
-        <td></td>
-        <td><%= link_to '編集', edit_category_second_path(category_second) %></td>
-        <td><%= link_to '削除', category_second, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to '生き物 追加', creature_new_path(category_second) %></td>
-      </tr>
-    <% end %>
+    <tbody>
+      <% @categories.each do |category| %>
+        <tr>
+          <td>カテゴリー</td>
+          <td><%= category.name %></td>
+          <td><%= category.order %></td>
+          <td><%= category.picture %></td>
+          <td><%= link_to '編集', edit_category_path(category) %></td>
+          <td><%= link_to '削除', category, method: :delete, data: { confirm: '消すと全部消えるよ?' } %></td>
+          <td><%= link_to '分類2 追加', second_new_path(category) %></td>
 
-    <% end %>
-  </tbody>
-</table>
+        </tr>
 
-<br>
+      <% category.category_seconds.each do |category_second| %>
+        <tr>
+          <td></td>
+          <td><%= category_second.name %></td>
+          <td><%= category_second.order %></td>
+          <td></td>
+          <td><%= link_to '編集', edit_category_second_path(category_second) %></td>
+          <td><%= link_to '削除', category_second, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to '生き物 追加', creature_new_path(category_second) %></td>
+        </tr>
+      <% end %>
 
-<%= form_tag import_categories_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "インポート" %>
-<% end %>
-<br>
+      <% end %>
+    </tbody>
+  </table>
 
+  <br>
 
-
-
+  <%= form_tag import_categories_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "インポート" %>
+  <% end %>
+  <br>
+</div>

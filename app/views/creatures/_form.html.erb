@@ -28,14 +28,16 @@
   
 
   <%# カテゴリー2を選択する　%>
-  <%= form.label :"カテゴリー2 選択" %>
-  <%= form.collection_select :category_second_id, CategorySecond.all, :id, :name%><br><br>
+  <div class="form-group form-horizontal">
+    <%= form.label :"カテゴリー2 選択" %>
+    <%= form.collection_select :category_second_id, CategorySecond.all, :id, :name, { prompt: false }, class:"form-control form-control-sm col-lg-5"%>
+  </div>
     <%# 書いた人を選択する　%>
-  <%= form.label :"説明文書いた人" %>
-  <%= form.collection_select :columned_by_id, ColumnedBy.all, :id, :name%><br><br>
-
-
+  <div class="form-group form-horizontal">
+    <%= form.label :"説明文書いた人" %>
+    <%= form.collection_select :columned_by_id, ColumnedBy.all, :id, :name, { prompt: false }, class:"form-control form-control-sm col-lg-5"%>
+  </div>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :"Update", class: "btn btn-outline-secondary" %>
   </div>
 <% end %>

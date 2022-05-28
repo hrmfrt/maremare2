@@ -1,33 +1,33 @@
 <%= render './maregiment/maregiment_header'%>
+  <p id="notice"><%= notice %></p>
+<div class="form_wrapper" style="padding:20px">
 
-<p id="notice"><%= notice %></p>
-
-<h1>Photo Sets</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @photo_sets.each do |photo_set| %>
+  <h1>Photo Sets</h1>
+  <table>
+    <thead>
       <tr>
-        <td><%= photo_set.name %></td>
-        <%#= 写真の中身を編集しにいく %>
-        <td><%= link_to '編集', photo_set_path(photo_set) %></td>
-        <td><%= link_to '削除 間違って登録したときだけ', photo_set, method: :delete, data: { confirm: '消していいですか?' } %></td>
-
+        <th>Name</th>
+        <th colspan="3"></th>
       </tr>
-  
+    </thead>
 
-  <% end %>
-  </tbody>
-</table>
+    <tbody>
+      <% @photo_sets.each do |photo_set| %>
+        <tr>
+          <td><%= photo_set.name %></td>
+          <%#= 写真の中身を編集しにいく %>
+          <td><%= link_to '編集', photo_set_path(photo_set) %></td>
+          <td><%= link_to '削除 間違って登録したときだけ', photo_set, method: :delete, data: { confirm: '消していいですか?' } %></td>
 
-<br>
+        </tr>
+    
 
-<%= link_to '新規追加', new_photo_set_path %>
-<%= link_to 'まれじめんと Top', maregiment_path %>
+    <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to '新規追加', new_photo_set_path %>
+  <%= link_to 'まれじめんと Top', maregiment_path %>
+</div>
