@@ -1,4 +1,4 @@
-bind "unix:///var/www/html/maremare2/tmp/sockets/pum.sock"
+bind "unix:///var/www/html/maremare2/tmp/sockets/puma.sock"
 
 # Puma can serve each request in a thread from an internal thread pool.
 # The `threads` method setting takes two numbers: a minimum and maximum.
@@ -13,7 +13,7 @@ threads min_threads_count, max_threads_count
 # Specifies the `worker_timeout` threshold that Puma will use to wait before
 # terminating a worker in development environments.
 #
-worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
+worker_timeout 3600 if ENV.fetch("RAILS_ENV", "production") == "production"
 
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
 #
@@ -21,7 +21,7 @@ worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
 
 # Specifies the `environment` that Puma will run in.
 #
-environment ENV.fetch("RAILS_ENV") { "development" }
+environment ENV.fetch("RAILS_ENV") { "production" }
 
 # Specifies the `pidfile` that Puma will use.
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
