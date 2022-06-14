@@ -12,7 +12,7 @@
 
   <div class="field">
     <%= form.label :"名前 【日付_水族館_撮影者】 にするとわかりやすい", {class: "col-sm-5 control-label"}  %>
-    <%= form.text_field :name, {class: "col-sm-6 form-control"}   %>
+    <%= form.text_field :name, value: @name.name, class: "col-sm-6 form-control" %>
   </div>
 
   <div class="form-group form-horizontal">
@@ -30,7 +30,7 @@
   <%= form.collection_select :photo_by_id, PhotoBy.all, :id, :name, { prompt: false }, class:"form-control form-control-sm col-lg-5"%>
   <%# 撮った人を選択する　%>
   <%= form.label :水族館, {class: "col-sm-3 control-label"}  %>
-  <%= form.collection_select :aquarium_id, Aquarium.all, :id, :name, { prompt: false }, class:"form-control form-control-sm col-lg-5"%>
+  <%= form.collection_select :aquarium_id, Aquarium.all, :id, :name, { prompt: false, selected: @latestphoto.aquarium_id}, class:"form-control form-control-sm col-lg-5"%>
 
   <div class="actions">
     <%= form.submit :"Update", class: "btn btn-outline-secondary" %>

@@ -3,7 +3,8 @@ class PhotoSetsController < ApplicationController
 
   # GET /photo_sets or /photo_sets.json
   def index
-    @photo_sets = PhotoSet.all
+    @photo_sets = PhotoSet.select(:name).distinct
+
   end
 
   # GET /photo_sets/1 or /photo_sets/1.json
@@ -12,10 +13,20 @@ class PhotoSetsController < ApplicationController
     @photos = Photo.where(photo_set_id: params[:id])
   end
 
+  def photosetlist
+
+    @pid = PhotoSet.where(name: params[:name]).pluck(:id)
+    @photos = Photo.where(photo_set_id: @pid)
+
+  end
+
   # GET /photo_sets/new
   def new
     @photo_set = PhotoSet.new
     @photo = Photo.new
+    #連続投稿に備えるため、一番新しい投稿の値を渡しておく
+    @name = PhotoSet.order(updated_at: :desc).first
+    @latestphoto = Photo.order(updated_at: :desc).first
   end
 
   # GET /photo_sets/1/edit
@@ -26,18 +37,24 @@ class PhotoSetsController < ApplicationController
   def create
     @photo_set = PhotoSet.new(photo_set_params)
     @photo_set.save
+    #tmp_id = @photo_set["id"]
 
     @photo_set.image_sets.each do |photo_set|
       @photo = Photo.new(photo_params)
       @photo["photo_set_id"] = @photo_set["id"]
       @photo["photo_num"] = photo_set["id"]
       @photo.save!
-
     end
 
-    respond_to do |format|
+    
+
+    #tmp = []
+
+  
+
+     respond_to do |format|
       if @photo_set.save
-        format.html { redirect_to photo_set_url(@photo_set), notice: "Photo set was successfully created." }
+        format.html { redirect_to new_photo_set_path , notice: "Photo set was successfully created." }
         format.json { render :show, status: :created, location: @photo_set }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -80,6 +97,6 @@ class PhotoSetsController < ApplicationController
     end
 
     def photo_params
-      params.require(:photo_set).permit(:caption, :creature_id, :photo_by_id, :aquarium_id, :photo_set_id, :photo_num)
+      params.require(:photo_set).permit(:photo_by_id,:creature_id,:photo_by_id, :aquarium_id, :photo_set_id, :photo_num)
     end
 end

@@ -16,9 +16,9 @@
         <tr>
           <td><%= photo_set.name %></td>
           <%#= 写真の中身を編集しにいく %>
-          <td><%= link_to '編集', photo_set_path(photo_set) %></td>
-          <td><%= link_to '削除 間違って登録したときだけ', photo_set, method: :delete, data: { confirm: '消していいですか?' } %></td>
-
+          <td><%= link_to '編集', "photosetlist/#{photo_set.name}" %>
+          <td><%#= link_to '編集', photo_set_path(photo_set) %></td>
+          <td><%#= link_to '削除 間違って登録したときだけ', photo_set, method: :delete, data: { confirm: '消していいですか?' } %></td>
         </tr>
     
 

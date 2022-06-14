@@ -75,3 +75,5 @@ group :development do
 end
 
 gem "sd_notify"
+
+gem "pry-rails"
