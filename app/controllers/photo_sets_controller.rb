@@ -46,15 +46,9 @@ class PhotoSetsController < ApplicationController
       @photo.save!
     end
 
-    
-
-    #tmp = []
-
-  
-
      respond_to do |format|
       if @photo_set.save
-        format.html { redirect_to new_photo_set_path , notice: "Photo set was successfully created." }
+        format.html { redirect_to photo_set_url(@photo_set) , notice: "Photo set was successfully created." }
         format.json { render :show, status: :created, location: @photo_set }
       else
         format.html { render :new, status: :unprocessable_entity }

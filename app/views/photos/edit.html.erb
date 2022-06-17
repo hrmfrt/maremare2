@@ -1,6 +1,11 @@
+<%= render './maregiment/maregiment_header'%>
+  <p id="notice"><%= notice %></p>
+<div class="form_wrapper" style="padding:20px">
+
 <h1>Editing Photo</h1>
 
-<%= image_tag PhotoSet.find(@photo.photo_set_id).image_sets.find(@photo.photo_num).variant( resize: "300" ) %><
+<%= image_tag PhotoSet.find(@photo.photo_set_id).image_sets.find(@photo.photo_num).variant( resize: "300" ) %>
+<br><br>
 
 <%= render 'form', photo: @photo %>
 <%= link_to 'Back', photos_path %>

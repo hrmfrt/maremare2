@@ -1,13 +1,14 @@
-<%= stylesheet_link_tag "maregiment/bootstrap.min.css", media: "all", 'data-turbolinks-track': "reload" %>
-<%= javascript_include_tag 'Bootstrap/bootstrap.min.js' %>
+
 
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+
   <%= link_to "まれじめんと", maregiment_path ,{class: "navbar-brand"}%>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav4" aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse justify-content-end" id="navbarNav4">
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
         <%= link_to '写真登録', "/photo_sets", {class: "nav-link"} %>
@@ -31,3 +32,8 @@
   </div>
 
 </nav>
+
+
+<%= stylesheet_link_tag "maregiment/bootstrap.min.css", media: "all", 'data-turbolinks-track': "reload" %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<%= javascript_include_tag 'Bootstrap/bootstrap.min.js' %>
