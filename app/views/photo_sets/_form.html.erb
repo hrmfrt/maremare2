@@ -22,13 +22,14 @@
 
   <div class="form-group form-horizontal">
     <%= form.label :生き物の名前, {class: "col-sm-3 control-label"}  %>
-    <%= form.collection_select :creature_id, Creature.all, :id, :japanese_name, { prompt: false }, class:"form-control form-control-sm col-lg-5"%>
+    <%= form.collection_select :creature_id, Creature.all.order(:japanese_name), :id, :japanese_name, { prompt: false }, class:"form-control form-control-sm col-lg-5"%>
   </div>
 
   <%# 撮った人を選択する　%>
   <%= form.label :写真撮った人, {class: "col-sm-3 control-label"}  %>
-  <%= form.collection_select :photo_by_id, PhotoBy.all, :id, :name, { prompt: false }, class:"form-control form-control-sm col-lg-5"%>
-  <%# 撮った人を選択する　%>
+  <%= form.collection_select :photo_by_id, PhotoBy.all, :id, :name, { prompt: false , selected: @latestphoto.photo_by_id}, class:"form-control form-control-sm col-lg-5"%>
+
+  <%# 水族館を選択する　%>
   <%= form.label :水族館, {class: "col-sm-3 control-label"}  %>
   <%= form.collection_select :aquarium_id, Aquarium.all, :id, :name, { prompt: false, selected: @latestphoto.aquarium_id}, class:"form-control form-control-sm col-lg-5"%>
 
