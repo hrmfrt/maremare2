@@ -1,5 +1,6 @@
 class PhotoSetsController < ApplicationController
   before_action :set_photo_set, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /photo_sets or /photo_sets.json
   def index

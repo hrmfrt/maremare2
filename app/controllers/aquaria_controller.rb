@@ -1,5 +1,6 @@
 class AquariaController < ApplicationController
   before_action :set_aquarium, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /aquaria or /aquaria.json
   def index

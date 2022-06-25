@@ -1,5 +1,6 @@
 class CreaturesController < ApplicationController
   before_action :set_creature, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /creatures or /creatures.json
   def index

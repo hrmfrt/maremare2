@@ -1,5 +1,6 @@
 class ColumnedBiesController < ApplicationController
   before_action :set_columned_by, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /columned_bies or /columned_bies.json
   def index

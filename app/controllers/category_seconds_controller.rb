@@ -1,5 +1,6 @@
 class CategorySecondsController < ApplicationController
   before_action :set_category_second, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /category_seconds or /category_seconds.json
   def index

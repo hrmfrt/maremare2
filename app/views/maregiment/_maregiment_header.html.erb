@@ -28,6 +28,9 @@
       <li class="nav-item">
         <%= link_to '撮影者', "/photo_bies", {class: "nav-link"} %>
       </li>
+      <li class="nav-item">
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+      </li>
     <ul>
   </div>
 

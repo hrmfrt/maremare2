@@ -1,5 +1,6 @@
 class PhotoBiesController < ApplicationController
   before_action :set_photo_by, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /photo_bies or /photo_bies.json
   def index

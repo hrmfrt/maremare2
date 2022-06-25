@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :photo_sets
   resources :columned_bies do
   collection { post :import }

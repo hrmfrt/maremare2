@@ -77,3 +77,9 @@ end
 gem "sd_notify"
 
 gem "pry-rails"
+
+# 認証機能用
+gem "devise"
+
+# 日本語化用
+gem "devise-i18n"
