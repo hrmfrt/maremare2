@@ -4,9 +4,21 @@
     <!--仮置き用のpicbuttonはスキップ-->
     <% unless category.id == 1 %>
       <%= link_to dictionary_path(category.id), remote: true do %>
-        <button href="" id="" class="small-btn"><%= image_tag(category.picture_url, class:"pic-button") if category.picture.present?%>
+        <button href="" id="" class="small-btn" ><%= image_tag(category.picture_url, class:"pic-button") if category.picture.present?%>
       <% end %>
       <p class="pic-category"><%= category.name%></p>
     <% end %>
   <% end %>
+
+  <script>
+      // ボタンをクリックしたらページトップにスクロールする
+      $('.small-btn').on('click', (e) => {
+          // ボタンのhrefに遷移しない
+          e.preventDefault();
+          // 600ミリ秒かけてトップに戻る
+          var photo_list = $('#main_area').offset().top;
+          $('html, body').animate({ scrollTop: photo_list }, 450);
+      });
+
+  </script>
 </div>

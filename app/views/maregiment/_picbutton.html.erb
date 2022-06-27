@@ -1,0 +1,49 @@
+<!--魚図鑑用のボタンパーシャル-->
+
+<br><br><br><Br>
+<p>まだ使えない</p>
+<div class="button-container">
+  <% @categories.each do |category| %>
+    <!--仮置き用のpicbuttonはスキップ-->
+        <button href="" id="button<%=category.id%>" class="small-btn" ><%= image_tag(category.picture_url, class:"pic-button") if category.picture.present?%>
+      <p class="pic-category"><%= category.name%></p>
+  <% end %>
+
+  <style>
+    .pic-button {
+    display      : inline-block;
+    width:60px;
+    height:60px;
+    border-radius: 50%;                  /* 角丸 */
+    box-shadow   : 6px 6px 3px #666666;  /* 影の設定 */
+    cursor       : pointer;              /* カーソル形状 */
+    transition   : .3s;                  /* なめらか変化 */
+}
+
+.pic-button:hover {
+    box-shadow   : none;                 /* 影の設定 */
+                     /* 角丸 */
+}
+
+  </style>
+
+
+
+</div>
+
+    <script>
+      // ボタンをクリックしたらページトップにスクロールする
+      $('.small-btn').on('click', (e) => {
+          // ボタンのhrefに遷移しない
+          e.preventDefault();
+          var day_id = $(this).attr('id');
+          console.log(day_id);
+          // 600ミリ秒かけてトップに戻る
+          var photo_list = $('').offset().top;
+          $('html, body').animate({ scrollTop: photo_list }, 450);
+      });
+
+     </script>
+
+<p>まだ使えない</p>
+<br>

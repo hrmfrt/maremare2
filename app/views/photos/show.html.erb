@@ -23,4 +23,4 @@
 
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
+<%= link_to 'Back', "/photosetlist/#{PhotoSet.find(@photo.photo_set_id).name}" %>

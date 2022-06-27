@@ -22,55 +22,6 @@ $(document).ready(function () {
 
 
 
-$(function () {
-
-    //ボタンがクリックされた時の動作を指定する。
-    $('button').on('click', function () {
-        //変数をリセットする
-        var category = ""
-        var len = ""
-        var code_l_cat = ""
-        //クリックしたボタンのidを取得する
-        category = $(this).attr("id");
-
-        //カテゴリーの数
-        len = eval(eval(category).length);
-
-        //大きい分類の名称
-        code_l_cat = "<h2 class=\"large_category_name\">" + eval(category)[0].l_name + "</h2>"
-        console.log(category)
-        console.log("check_1")
-
-        //小さい分類の数だけ繰り返す
-        var code_s_cat = ""
-        for (let i = 1; i < len; i++) {
-            //小カテゴリーの名称を定義
-            var code_s_name = ""
-            var code_s_name = "<h2 class=\"small_categories\">" + eval(category)[i].s_name + "</h2>"
-
-
-            //小カテゴリーの長さ
-            var s_len = ""
-            s_len = eval(category)[i].list.length
-
-            //小さい分類内の要素の数だけ繰り返す
-            var code_fig_list = ""
-            for (let l = 0; l < s_len; l++) {
-                code_fig_list = code_fig_list + "<div class=\"point\"><h3>" + eval(category)[i].list[l].name + "</h3><figure><img id = \"" + eval(category)[i].list[l].id + "\" class=\"modal-open\" src=\"" + eval(category)[i].list[l].pic_path[0] + "\" alt=\"" + eval(category)[i].list[l].pic_name + "\"></figure></div>"
-            };
-            code_s_cat = code_s_cat + "<div class=\"small_section\">" + code_s_name + "<div class=\"lists\">" + code_fig_list + "</div></div>"
-            console.log("check_2")
-        };
-        code_html = "<div class=\"large_section\">" + code_l_cat + code_s_cat + "</div>"
-        $('#main_area').html(code_html
-        );
-
-        modal_html();
-        modal();
-    });
-
-});
-
 
 $(function () {
     $("test").load("test.html");

@@ -7,6 +7,8 @@
 <h1 class="page_title">まれじめんとトップ画面</h1>
 <%= link_to '生き物情報追加', new_creature_path %> 
 
+<%= render partial: "picbutton" %>
+
 <table>
   <thead>
 
@@ -14,7 +16,7 @@
 
   <tbody>
     <% @categories.each do |category| %>
-      <tr class="category1">
+      <tr class="category1" id="button<%=category.name%>">
         <td class="pic_column"><%= image_tag(category.picture_url, class:"category_button") if category.picture.present?%></td>
         <td class="name_column"><%= category.name %></td>
         <td><%= category.order %></td>
