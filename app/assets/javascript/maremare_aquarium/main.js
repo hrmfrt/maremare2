@@ -20,9 +20,6 @@ $(document).ready(function () {
 });
 
 
-
-
-
 $(function () {
     $("test").load("test.html");
     console.log("test")
