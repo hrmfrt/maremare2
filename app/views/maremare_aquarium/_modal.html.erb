@@ -2,7 +2,7 @@
   <div class="modal-pic">
     <!--code_pic該当部分以下を繰り返す-->
       <% @creaturephotos.each do |photo| %>
-      <div><%= image_tag PhotoSet.find(photo.photo_set_id).image_sets.find(photo.photo_num).variant( resize: "300" ) %>
+      <div><%= image_tag PhotoSet.find(photo.photo_set_id).image_sets.find(photo.photo_num).variant( resize: "500" ) %>
       <p class="caption"><%= photo.caption %></p>
       </div>
       <%end%>

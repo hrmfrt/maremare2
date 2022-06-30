@@ -18,7 +18,7 @@
 
   <tbody>
     <% @categories.each do |category| %>
-      <tr class="category1" id="button<%=category.name%>">
+      <tr class="category1" id="category_<%=category.id%>">
         <td class="pic_column"><%= image_tag(category.picture_url, class:"category_button") if category.picture.present?%></td>
         <td class="name_column"><%= category.name %></td>
         <td><%= category.order %></td>

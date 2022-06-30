@@ -1,11 +1,11 @@
 <!--魚図鑑用のボタンパーシャル-->
 
-<br><br><br><Br>
+<br><br><br><br>
 <p>まだ使えない</p>
-<div class="button-container">
+  <div class="button-container">
   <% @categories.each do |category| %>
     <!--仮置き用のpicbuttonはスキップ-->
-        <button href="" id="button<%=category.id%>" class="small-btn" ><%= image_tag(category.picture_url, class:"pic-button") if category.picture.present?%>
+        <button href="#category_<%=category.id%>" id="" class="small-btn" ><%= image_tag(category.picture_url, class:"pic-button") if category.picture.present?%>
       <p class="pic-category"><%= category.name%></p>
   <% end %>
 
@@ -18,32 +18,24 @@
     box-shadow   : 6px 6px 3px #666666;  /* 影の設定 */
     cursor       : pointer;              /* カーソル形状 */
     transition   : .3s;                  /* なめらか変化 */
-}
+    }
 
-.pic-button:hover {
-    box-shadow   : none;                 /* 影の設定 */
-                     /* 角丸 */
-}
-
+    .pic-button:hover {
+        box-shadow   : none;                 /* 影の設定 */
+                        /* 角丸 */
+    }
   </style>
-
-
-
 </div>
 
+  <!--ページ内の指定の場所に移動する 参考URL: https://coco-factory.jp/ugokuweb/move01/8-2-1/-->
     <script>
-      // ボタンをクリックしたらページトップにスクロールする
-      $('.small-btn').on('click', (e) => {
-          // ボタンのhrefに遷移しない
-          e.preventDefault();
-          var day_id = $(this).attr('id');
-          console.log(day_id);
-          // 600ミリ秒かけてトップに戻る
-          var photo_list = $('').offset().top;
-          $('html, body').animate({ scrollTop: photo_list }, 450);
-      });
-
-     </script>
+        $('.button-container button[href*="#"]').click(function () {
+          var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
+          var pos = $(elmHash).offset().top;  //idの上部の距離を取得
+          $('body,html').animate({scrollTop: pos}, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
+          return false;
+        });
+    </script>
 
 <p>まだ使えない</p>
 <br>
