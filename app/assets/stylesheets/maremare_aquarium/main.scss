@@ -448,35 +448,75 @@ footer small {
         display:none;
     }
 
+    .pic-button{
+        width:70px;
+        height:70px;
+    }
 
-/* チャプター：メインエリア */
-
-#main_area h2{
-    width:90%px;
-}
+    .point{
+        width:90%;
+    }
 
 
-.main_area{
-    margin-bottom:30px;
-}
+    /* チャプター：メインエリア */
 
-#main h3{
-    font-size:13px;
-    height:25px;
-    margin-left:5px;
-    margin-bottom:0px;
-    border-left:solid 3px #fa9786;
-    padding-left:5px;
+    #main_area h2{
+        width:90%px;
+    }
 
-}
-#main figure{
-    margin:0px;
-    margin-top:15px;
-}
 
-#main{
-    margin-bottom:10px;
-}
+    .main_area{
+        margin-bottom:30px;
+    }
+
+    #main h3{
+        font-size:13px;
+        height:25px;
+        margin-left:5px;
+        margin-bottom:0px;
+        border-left:solid 3px #fa9786;
+        padding-left:5px;
+    }
+    
+    #main figure{
+        margin:0px;
+        margin-top:15px;
+    }
+
+    #main{
+        margin-bottom:10px;
+    }
+
+    .lists {
+        display:flex;
+        flex-wrap:wrap;
+    }
+    
+    
+    .point{
+        width:80%;
+    
+    }
+    
+    .point figure{
+        width:63%;
+        height:130px;
+        
+    }
+    
+    .point img {
+        width:200px;
+        height:120px;
+        object-fit:cover;
+        margin-left:100px;
+        margin-top:5px;
+    }
+    
+    .point p{
+        width:60%;
+        margin:auto;
+    
+    }
 
 
 
