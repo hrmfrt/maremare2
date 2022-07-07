@@ -23,6 +23,10 @@ Rails.application.routes.draw do
   resources :categories do
     collection { post :import }
   end
+
+  # 水族館達成度
+  get "aq_tasseido", to: "aq_tasseido#index"
+  get "aq_tasseido_result/:num", to: "aq_tasseido#result"
   
   #photosetlist
   get "photosetlist/:name", to: "photo_sets#photosetlist"

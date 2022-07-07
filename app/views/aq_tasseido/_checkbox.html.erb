@@ -1,0 +1,84 @@
+
+<div class="section-region">
+  <div>北海道</div>
+  <% @hokkaido.each do |hokkaido| %>
+    <%= check_box_tag :test1 %>
+    <%= hokkaido.name%><br>
+  <%end%>
+</div>
+
+<div class="section-region">
+  <div>東北</div>
+  <% @tohoku.each do |tohoku| %>
+    <%= check_box_tag :test1 %>
+    <%= tohoku.name%><br>
+  <%end%>
+</div>
+
+<div class="section-region">
+  <div>関東</div>
+  <% @kanto.each do |kanto| %>
+    <%= check_box_tag :test1 %>
+    <%= kanto.name%><br>
+  <%end%>
+</div>
+
+<div class="section-region">
+  <div>中部</div>
+  <% @chubu.each do |chubu| %>
+    <%= check_box_tag :test1 %>
+    <%= chubu.name%><br>
+  <%end%>
+</div>
+
+<div class="section-region">
+  <div>関西</div>
+  <% @kansai.each do |kansai| %>
+    <%= check_box_tag :test1 %>
+    <%= kansai.name%><br>
+  <%end%>
+</div>
+
+<div class="section-region">
+  <div>中国・四国</div>
+  <% @chusikoku.each do |chusikoku| %>
+    <%= check_box_tag :test1 %>
+    <%= chusikoku.name%><br>
+  <%end%>
+</div>
+
+
+<div class="section-region">
+  <div>九州</div>
+  <% @kyusyu.each do |kyusyu| %>
+    <%= check_box_tag "check",true,false,class:"checks"%>
+    <%= kyusyu.name%><br>
+  <%end%>
+</div>
+<button id="btn" type="button">制覇レベル測定</button>
+
+<input type="submit" value="SENT">
+
+<script>
+//チェックボックスを取得する
+  const el = document.getElementsByClassName("checks");
+  //カウントボタンを取得する
+  const btn = document.getElementById("btn");
+
+  //チェック済みのチェックボックスの数を返す
+  const getCheckedCount = () => {
+
+      let count = 0;
+
+      for (let i = 0; i < el.length; i++) {
+          if (el[i].checked) {
+              count++;
+          }
+      }
+      //javascriptで書いたけど、ほんとはかっこちょくlink_toとかにしたい。
+      window.location.href = "https://maremare_aquarium.com/aq_tasseido_result/"+count
+  };
+
+  //ボタンをクリックした時に「getCheckedCount()」を呼び出す
+  btn.addEventListener("click", getCheckedCount, false);
+</script>
