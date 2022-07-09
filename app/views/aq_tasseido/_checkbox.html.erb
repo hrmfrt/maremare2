@@ -2,7 +2,7 @@
 <div class="section-region">
   <div>北海道</div>
   <% @hokkaido.each do |hokkaido| %>
-    <%= check_box_tag :test1 %>
+    <%= check_box_tag "check",true,false,class:"checks"%>
     <%= hokkaido.name%><br>
   <%end%>
 </div>
@@ -10,7 +10,7 @@
 <div class="section-region">
   <div>東北</div>
   <% @tohoku.each do |tohoku| %>
-    <%= check_box_tag :test1 %>
+    <%= check_box_tag "check",true,false,class:"checks"%>
     <%= tohoku.name%><br>
   <%end%>
 </div>
@@ -18,7 +18,7 @@
 <div class="section-region">
   <div>関東</div>
   <% @kanto.each do |kanto| %>
-    <%= check_box_tag :test1 %>
+    <%= check_box_tag "check",true,false,class:"checks"%>
     <%= kanto.name%><br>
   <%end%>
 </div>
@@ -26,7 +26,7 @@
 <div class="section-region">
   <div>中部</div>
   <% @chubu.each do |chubu| %>
-    <%= check_box_tag :test1 %>
+    <%= check_box_tag "check",true,false,class:"checks"%>
     <%= chubu.name%><br>
   <%end%>
 </div>
@@ -34,7 +34,7 @@
 <div class="section-region">
   <div>関西</div>
   <% @kansai.each do |kansai| %>
-    <%= check_box_tag :test1 %>
+    <%= check_box_tag "check",true,false,class:"checks" %>
     <%= kansai.name%><br>
   <%end%>
 </div>
@@ -42,7 +42,7 @@
 <div class="section-region">
   <div>中国・四国</div>
   <% @chusikoku.each do |chusikoku| %>
-    <%= check_box_tag :test1 %>
+    <%= check_box_tag "check",true,false,class:"checks"%>
     <%= chusikoku.name%><br>
   <%end%>
 </div>

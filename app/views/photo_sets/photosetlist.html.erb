@@ -9,8 +9,6 @@
         <% @photos.each do |photo| %>
       <table>
         <tr>
-
-
           <%#画像を一枚ずつ表示%>
           <td><%= image_tag PhotoSet.find(photo.photo_set_id).image_sets.find(photo.photo_num).variant( resize: "300" ) %></td>
           <% if photo.caption == nil then %>

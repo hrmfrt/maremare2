@@ -38,18 +38,23 @@ class PhotoSetsController < ApplicationController
   def create
     @photo_set = PhotoSet.new(photo_set_params)
     @photo_set.save
-    #tmp_id = @photo_set["id"]
+    @num = @photo_set.id
+    
 
-    @photo_set.image_sets.each do |photo_set|
+    #tmp_id = @photo_set["id"]
+    @photo_set.image_sets.select(:id).each do |photo_set|
       @photo = Photo.new(photo_params)
-      @photo["photo_set_id"] = @photo_set["id"]
-      @photo["photo_num"] = photo_set["id"]
+      @photo["photo_set_id"] = @num
+      @photo["photo_num"] = photo_set.id
       @photo.save!
+      sleep 1
     end
+
+    @redirectnum = Photo.find_by(photo_set_id: @num).id
 
      respond_to do |format|
       if @photo_set.save
-        format.html { redirect_to photo_set_url(@photo_set) , notice: "Photo set was successfully created." }
+        format.html { redirect_to "/photos/#{@redirectnum}" , notice: "Photo set was successfully created." }
         format.json { render :show, status: :created, location: @photo_set }
       else
         format.html { render :new, status: :unprocessable_entity }

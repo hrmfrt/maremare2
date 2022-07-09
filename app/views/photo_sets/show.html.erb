@@ -7,17 +7,18 @@
     <%= @photo_set.name %>
   </p>
 
+  <div class="picture-space"></div>
+
+
       <% @photos.each do |photo| %>
       <table>
         <tr>
-
-
           <%#画像を一枚ずつ表示%>
           <td><%= image_tag PhotoSet.find(photo.photo_set_id).image_sets.find(photo.photo_num).variant( resize: "300" ) %></td>
           <% if photo.caption == nil then %>
-          <td>No Caption</td>
+            <td>No Caption</td>
           <% else %>
-          <td><%= photo.caption %></td>
+            <td><%= photo.caption %></td>
           <% end %>
           <td><%= photo.creature.japanese_name%></td>
           <td><%= link_to '編集', edit_photo_path(photo) %></td>

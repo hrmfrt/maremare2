@@ -24,6 +24,8 @@ Rails.application.routes.draw do
     collection { post :import }
   end
 
+  post "photo_sets/photo_interval", to: "photo_sets#photo_interval"
+
   # 水族館達成度
   get "aq_tasseido", to: "aq_tasseido#index"
   get "aq_tasseido_result/:num", to: "aq_tasseido#result"

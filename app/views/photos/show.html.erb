@@ -1,4 +1,18 @@
 <%= render './maregiment/maregiment_header'%>
+
+<!--もどるぼたん-->
+<div>投稿した直後は、すすむボタンがでなくなるまで、押してください。</div>
+<% if Photo.exists?(@photo.id-1)%>
+  <%= link_to "もどる", "/photos/#{@photo.id-1}" %>
+<% else %>
+<% end%>
+<!--すすむボタン-->
+<% if Photo.exists?(@photo.id+1)%>
+  <%= link_to "すすむ", "/photos/#{@photo.id+1}" %>
+<% else %>
+<% end%>
+
+
   <p id="notice"><%= notice %></p>
 <div class="form_wrapper" style="padding:20px">
 
@@ -16,9 +30,7 @@
 
 <p>
   <strong>Picture:</strong>
-  <% @photo.photo_num do |pict| %>
-  <%= image_tag pict %>
-  <% end%>
+  <%= image_tag PhotoSet.find(@photo.photo_set_id).image_sets.find(@photo.photo_num).variant( resize: "300" ) %>
 </p>
 
 
