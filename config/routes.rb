@@ -26,6 +26,8 @@ Rails.application.routes.draw do
 
   post "photo_sets/photo_interval", to: "photo_sets#photo_interval"
 
+
+
   # 水族館達成度
   get "aq_tasseido", to: "aq_tasseido#index"
   get "aq_tasseido_result/:num", to: "aq_tasseido#result"
@@ -42,6 +44,7 @@ Rails.application.routes.draw do
   get "MaremareAquarium/column", to: "maremare_aquarium#column", as:"column"
   get "MaremareAquarium/writer", to: "maremare_aquarium#writer", as:"writer"
   get "MaremareAquarium/information", to: "maremare_aquarium#information", as:"information"
+  get "MaremareAquarium/creature/:id", to: "maremare_aquarium#creature", as:"individual"
 
   #modal表示のためのAjax処理用
   get "MaremareAquarium/dictionary/:id", to: "maremare_aquarium#dictionary", as:"dictionary"

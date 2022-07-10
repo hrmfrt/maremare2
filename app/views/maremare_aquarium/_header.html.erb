@@ -4,11 +4,11 @@
             <a class="page_rogo" href="top"><%=image_tag"title.png"%></a>
         </div>
         <div class="header link_area gnav">
-            <li class="btn"><a class="link-btn link-radius" href="top">いきものたち</a></li>
-            <li class="btn"><a class="link-btn link-radius" href="top">いきものたち</a></li>
-            <li class="btn"><a class="link-btn link-radius" href="column">コラム</a></li>
-            <li class="btn"><a class="link-btn link-radius" href="information">お知らせ</a></li>
-            <li class="btn"><a class="link-btn link-radius" href="writer">運営者</a></li>
+            <li class="btn"><%= link_to "いきもの紹介", top_path, {class:"link-btn link-radius"}%></li>
+            <li class="btn"><%= link_to "いきものたち", top_path, {class:"link-btn link-radius"}%></li>
+            <li class="btn"><%= link_to "コラム", "https://maremare-aquarium.sumomo.ne.jp/", {class:"link-btn link-radius"}%></li>
+            <li class="btn"><%= link_to "お知らせ", information_path, {class:"link-btn link-radius"}%></li>
+            <li class="btn"><%= link_to "運営者", "https://maremare-aquarium.sumomo.ne.jp/?page_id=102", {class:"link-btn link-radius"}%></li>
         </div>
     </ul>
 </header>

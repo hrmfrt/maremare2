@@ -1,38 +1,47 @@
-<%= stylesheet_link_tag "maremare_aquarium/main.css", media: "all", 'data-turbolinks-track': "reload" %>
+
 <%= stylesheet_link_tag "maremare_aquarium/dictionary.css", media: "all", 'data-turbolinks-track': "reload" %>
 <%= stylesheet_link_tag "maremare_aquarium/slick.css", media: "all", 'data-turbolinks-track': "reload" %>
 <%= stylesheet_link_tag "maremare_aquarium/slick-theme.css", media: "all", 'data-turbolinks-track': "reload" %>
-<%= javascript_include_tag 'maremare_aquarium/slick.js' %>
-<%= javascript_include_tag 'maremare_aquarium/main.js' %>
+<%= stylesheet_link_tag "maremare_aquarium/main.css", media: "all", 'data-turbolinks-track': "reload" %>
+
 
 
     <body>
-        <!--headerを挿入-->
+
+        <!--ここからヘッダー-->
         <%= render partial: "header" %>
         <%= render partial: "topslide" %>
 
         <div id="wrapper">
-            
             <%= render partial: "sidebar" %>
-
             <!--ここからメイン-->
             <div id="main">
+                <%= render partial: "creature" %>
                 <!--クリックしたら画像が表示されるところ-->
-                <section id="main_area"></section>
-
-                <!--メインエリア-->
-                <section>
-                    <h2>いきものコラム</h2>
-                    <br>
-                    <a href="/column/urashima.html" class="column_link">【第一回】 浦島太郎に出てくるウミガメの種類って？</a>
-
-                    <div><br><br></div>
+                <section id="main_area">
+                    <div id="creatures"></div>
                 </section>
-            
+                <!--モーダルやらなんちゃらを入れる部分-->
+                <div id="dictionary-wrapper"></div>
+
+                <!-- モーダル本体 -->
+                <div class="modal-container">
+                    <div class="modal-body">
+                        <!-- 閉じるボタン -->
+                        <div class="modal-close">×</div>
+                        <!-- モーダル内のコンテンツ -->
+                        <div class="modal-content">
+                            <p>文章が入ります。</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+                </section>
 
 
-     
-        
+
+                
                 <section id="news">
                     <h2>お知らせ</h2>
                     <ul>
@@ -43,14 +52,12 @@
                     </ul>
                 </section>
             </div>
-            <!--メインここまで-->
-            <!--ここからサイド-->
-
-            <!--サイドここまで-->
         </div>
-        <!--wrapperここまで-->
 
         <%= render partial: "footer" %>
 
+
     </body>
-</html>
+
+<%= javascript_include_tag 'maremare_aquarium/slick.js' %>
+<%= javascript_include_tag 'maremare_aquarium/main.js' %>

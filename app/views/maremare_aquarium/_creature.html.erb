@@ -1,0 +1,14 @@
+<div>なまえ</div>
+<%= @creature.japanese_name %>
+<br>
+    <div class="modal-pic">
+      <% @creaturephotos.each do |photo| %>
+      <div><%= image_tag PhotoSet.find(photo.photo_set_id).image_sets.find(photo.photo_num).variant( resize: "500" ) %>
+      <p class="caption"><%= photo.caption %></p>
+      </div>
+      <%end%>
+    </div>
+
+<%= @creature.scientific_name%>
+<br>
+<%= @creature.information%>

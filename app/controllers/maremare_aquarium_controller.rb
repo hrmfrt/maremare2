@@ -14,6 +14,11 @@ class MaremareAquariumController < ApplicationController
   def writer
   end
 
+  def creature
+    @creature = Creature.find(params[:id])
+    @creaturephotos = Photo.where(creature_id: params[:id])
+  end
+
   def dictionary
     @category = Category.find(params[:id])
   end

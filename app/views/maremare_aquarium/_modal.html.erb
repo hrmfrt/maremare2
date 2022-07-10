@@ -9,7 +9,7 @@
   </div>
   <!--code_info 該当部分-->
   <table align="left" valign="top">
-    <tr><th class="ti">和名</th><th>:</th><th><%= @creature.japanese_name %></th></tr>
+    <tr><th class="ti">和名</th><th>:</th><th><%=link_to @creature.japanese_name, "/MaremareAquarium/creature/#{@creature.id}" %></th></tr>
     <tr><th class="ti">学名</th><th>:</th><th><%= @creature.scientific_name %></th></tr>
     <tr><th class="ti">説明</th><th>:</th><th><%= @creature.information %></th></tr>
   </table>
