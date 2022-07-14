@@ -64,6 +64,11 @@ img {
 }
 
 /* チャプター：ヘッダー */
+
+.header_for_mobile{
+    display:none;
+}
+
 header {
     width: 1100px;
     height:80px;
@@ -424,17 +429,30 @@ footer small {
     width:100%;
     }
 
+    .header_for_mobile{
+        margin-top:20px;
+    }
+
     body{
         width:100%;
     }
     #main_visual{
         width:100%;
     }
-    header{
+
+    header {
+        width:100%;
+
+    }
+    .header_for_pc{
         width:100%;
         display:none;
-        
     }
+
+    .header_for_mobile{
+        display:inline;
+    }
+
     #wrapper{
         width:100%;
         margin:0 auto;
@@ -464,6 +482,7 @@ footer small {
         width:90%px;
     }
 
+    
 
     .main_area{
         margin-bottom:30px;
@@ -519,6 +538,97 @@ footer small {
     }
 
 
+    /****メニュー全体****/
+
+
+#menu{
+	/*配置*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 100;
+}
+
+/****メニュー開閉ボタン****/
+#menu div{
+	/*デザイン*/
+	width: 30px;
+	height: 30px;
+	background: rgba(200,200,200,1);
+	/*配置*/
+	overflow: hidden;
+	position: absolute;
+}
+
+#menu .menuopen{
+	/*デザイン*/
+	color: rgba(255,255,255,1);
+	font-size: 20px;
+	/*配置*/
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: auto;
+}
+
+#menu .menuclose{
+	/*デザイン*/
+	color: rgba(255,255,255,1);
+	font-size: 20px;
+	/*配置*/
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: auto;
+}
+
+/****メニュー一覧****/
+#menu ul{
+	/*デザイン*/
+	background: rgba(200,200,200,1);
+	width: 80%;
+	/*配置*/
+	position: absolute;
+	top: 30px;/*#menu divの高さ*/
+	left: 0;
+	display: none;
+}
+
+#menu li{
+	/*デザイン*/
+	padding: 10px;
+	color: rgba(0,0,0,1);
+	border-bottom: 1px rgba(255,255,255,1) solid;
+	/*配置*/
+	pointer-events: auto;
+}
+
+/****メニューオープン時****/
+#menu:target .menuopen{
+	/*配置*/
+	display: none;
+}
+
+#menu:target .menuclose{
+	/*配置*/
+	display: block;
+}
+
+#menu:target ul{
+	/*配置*/
+	display: block;
+}
+
+/*** メインエフェクト ***/
 
 
 }

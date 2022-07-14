@@ -1,5 +1,5 @@
 <header>
-    <ul>
+    <ul class="header_for_pc">
         <div class="header logo_area">
             <a class="page_rogo" href="top"><%=image_tag"title.png"%></a>
         </div>
@@ -9,6 +9,23 @@
             <li class="btn"><%= link_to "コラム", "https://maremare-aquarium.sumomo.ne.jp/", {class:"link-btn link-radius"}%></li>
             <li class="btn"><%= link_to "お知らせ", information_path, {class:"link-btn link-radius"}%></li>
             <li class="btn"><%= link_to "運営者", "https://maremare-aquarium.sumomo.ne.jp/?page_id=102", {class:"link-btn link-radius"}%></li>
+            </ul>
         </div>
     </ul>
+
+	<div id="menu" class="header_for_mobile">
+		<div><a href="#menu" class="menuopen">OPEN</a><a href="#close" class="menuclose">CLOSE</div>
+		<ul>
+            <li><%= link_to "いきもの紹介", top_path%></li>
+            <li><%= link_to "いきものたち", top_path%></li>
+            <li><%= link_to "コラム", "https://maremare-aquarium.sumomo.ne.jp/"%></li>
+            <li><%= link_to "お知らせ", information_path%></li>
+            <li><%= link_to "運営者", "https://maremare-aquarium.sumomo.ne.jp/?page_id=102"%></li>
+		</ul>
+	</div>
+	<div id="main">
+		<!-- メイン内容 -->
+	</div>
+
+
 </header>
