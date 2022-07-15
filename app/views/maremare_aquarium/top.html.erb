@@ -61,3 +61,12 @@
 
 <%= javascript_include_tag 'maremare_aquarium/slick.js' %>
 <%= javascript_include_tag 'maremare_aquarium/main.js' %>
+
+<script>
+$(function() {
+    $(".nav").css("display","none");
+    $(".menu_button").on("click", function() {
+        $(".nav").slideToggle();
+    });
+});
+</script>
