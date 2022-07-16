@@ -47,7 +47,7 @@ class PhotoSetsController < ApplicationController
       @photo["photo_set_id"] = @num
       @photo["photo_num"] = photo_set.id
       @photo.save!
-      sleep 3
+      sleep 1
     end
 
     @redirectnum = Photo.find_by(photo_set_id: @num).id
