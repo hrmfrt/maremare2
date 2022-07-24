@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   get "aq_tasseido_result/:num", to: "aq_tasseido#result"
   
   #photosetlist
-  get "photosetlist/:name", to: "photo_sets#photosetlist"
+  get "photosetlist/:name", to: "photo_sets#photosetlist", as:"photo_set_list"
 
   get "category/:id/cat2_new", to: "category_seconds#new", as: "second_new"
   get "category_second/:id/creature_new", to:"creatures#new", as: "creature_new"

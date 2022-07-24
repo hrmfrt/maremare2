@@ -1,13 +1,23 @@
+<!--個別ページのmeta_tagを設定-->
+<% set_meta_tags site: "まれじめんと", 
+                 title: "トップ",
+                 noindex: true 
+%>
 
+<!--まれじめんとのcss読み込み-->
 <%= stylesheet_link_tag "maregiment/top.css", media: "all", 'data-turbolinks-track': "reload" %>
 
-<%= render 'maregiment_header'%>
+<!--ヘッダー-->
+<%= render './maregiment/maregiment_header'%>
 
-
+<!--ここからメイン-->
 <p id="notice"><%= notice %></p>
 
 <h1 class="page_title">まれじめんとトップ画面</h1>
-<%= link_to '生き物情報追加', new_creature_path %> 
+
+<!--スマホ用にリンクを仮置き-->
+<%= link_to '生き物情報追加', new_creature_path %>
+<%= link_to "写真追加" , photo_sets_path %> 
 <%= link_to "トップページを確認", top_path%>
 
 <%= render partial: "picbutton" %>

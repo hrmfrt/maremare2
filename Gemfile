@@ -83,3 +83,9 @@ gem "devise"
 
 # 日本語化用
 gem "devise-i18n"
+
+# SEO用
+gem "meta-tags"
+
+
+

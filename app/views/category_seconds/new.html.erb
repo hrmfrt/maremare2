@@ -1,5 +1,13 @@
+<!--個別ページのmeta_tagを設定-->
+<% set_meta_tags site: "まれじめんと", 
+                 title: 'カテゴリー2新規',
+                 noindex: true 
+%>
+
+<!--まれじめんとのヘッダーパーシャル-->
 <%= render './maregiment/maregiment_header'%>
 
+<!--ここからメイン-->
 <h1>分類2 登録画面</h1>
 
 <%= render 'form', category_second: @category_second %>

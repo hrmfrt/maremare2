@@ -1,6 +1,17 @@
+<!--個別ページのmeta_tagを設定-->
+<% set_meta_tags site: "まれじめんと", 
+                 title: "写真新規登録",
+                 noindex: true 
+%>
+
+<!--まれじめんとのヘッダーパーシャル-->
 <%= render './maregiment/maregiment_header'%>
+
+<!--ここからメイン-->
 <div class="form_wrapper" style="padding:20px">
   <h1>新規写真 一括登録</h1>
+
+  <div>やっぱり一枚ずつの登録でお願いします。。。</div>
 
   <%= render 'form', photo_set: @photo_set %>
 

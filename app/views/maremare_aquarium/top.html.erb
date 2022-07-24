@@ -1,22 +1,28 @@
-
+<!--cssとjsファイルを読み込み-->
 <%= stylesheet_link_tag "maremare_aquarium/dictionary.css", media: "all", 'data-turbolinks-track': "reload" %>
 <%= stylesheet_link_tag "maremare_aquarium/slick.css", media: "all", 'data-turbolinks-track': "reload" %>
 <%= stylesheet_link_tag "maremare_aquarium/slick-theme.css", media: "all", 'data-turbolinks-track': "reload" %>
 <%= stylesheet_link_tag "maremare_aquarium/main.css", media: "all", 'data-turbolinks-track': "reload" %>
 
+<!--個別ページのmeta_tagを設定-->
+<% set_meta_tags title: "生き物図鑑",
+                 description: "お魚研究生と元研究生がつくる、水族館の生き物図鑑です。まだまだ情報更新中ですが、水族館の生き物たちの様々な姿を紹介します。"
+%>
 
 
     <body>
 
-        <!--ここからヘッダー-->
+        <!--ヘッダー-->
         <%= render partial: "header" %>
         <%= render partial: "topslide" %>
 
         <div id="wrapper">
             <%= render partial: "sidebar" %>
-            <!--ここからメイン-->
+            <!--メイン-->
             <div id="main">
+                <!--生き物のボタンをパーシャルで表示-->
                 <%= render partial: "picbutton" %>
+
                 <!--クリックしたら画像が表示されるところ-->
                 <section id="main_area">
                     <div id="creatures"></div>

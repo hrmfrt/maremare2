@@ -1,9 +1,14 @@
-
+<!--cssとjsファイルの読み込み-->
 <%= stylesheet_link_tag "maremare_aquarium/dictionary.css", media: "all", 'data-turbolinks-track': "reload" %>
 <%= stylesheet_link_tag "maremare_aquarium/slick.css", media: "all", 'data-turbolinks-track': "reload" %>
 <%= stylesheet_link_tag "maremare_aquarium/slick-theme.css", media: "all", 'data-turbolinks-track': "reload" %>
 <%= stylesheet_link_tag "maremare_aquarium/main.css", media: "all", 'data-turbolinks-track': "reload" %>
 
+
+<!--個別ページのmeta_tagを設定-->
+<% set_meta_tags title: "図鑑:#{@creature.japanese_name}",
+                 description: "#{@creature.information}"
+%>
 
 
     <body>

@@ -1,5 +1,13 @@
+<!--個別ページのmeta_tagを設定-->
+<% set_meta_tags site: "まれじめんと", 
+                 title: "コラム書いてくれた人一覧",
+                 noindex: true 
+%>
+
+<!--まれじめんとのヘッダーパーシャル-->
 <%= render './maregiment/maregiment_header'%>
 
+<!--ここからメイン-->
 <p id="notice"><%= notice %></p>
 <div class="form_wrapper" style="padding:20px">
   <h1>説明文書いてくれた人</h1>
