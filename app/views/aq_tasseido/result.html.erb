@@ -13,31 +13,13 @@
 
                 <!--クリックしたら画像が表示されるところ-->
                 <section id="main_area">
-                    <div class="title">あなたの水族館マニア度は</div>
-                    <br>
-                    <br><br>
-                    <div class="score"><%= @score %></div>
-                    <br><br><br><br>
-                    <div class="tensu"><%= @num +  "か所 / 100か所"%>
-                    <br>
-                    <br>
-                    <div class="comment"><%= @comment%></div>
+                    <%=image_tag"tasseido_resize/tasseido_"+@num+".jpg", class:"result"%>
 
                     <style>
-                        .title{
-                            font-size: 20px
+                        .result{
+                            width: 80%;
                         }
-                        .score{
-                            font-size: 90px
-                        }
-                        .tensu{
-                            font-size: 30px;
 
-                        }
-                        .comment{
-                            font-size: 20px
-
-                        }
                     </style>
                 </section>
                 <!--モーダルやらなんちゃらを入れる部分-->

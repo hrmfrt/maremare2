@@ -13,30 +13,7 @@ class AqTasseidoController < ApplicationController
   def result
     @num = params[:num]
     @numi = params[:num].to_i
-
-
-    if @numi < 5 then
-      @score = "コペポーダ級"
-      @comment = "あなたは生まれたばかりの水族館マニアです。これから楽しい世界が待ってるよ！"
-    elsif @numi <10 then
-      @score = "イワシ級"
-      @comment = "あなたは開発途上の水族館マニアです。近場の気になるところからレッツゴー"
-    elsif @numi<20 then
-      @score = "タイ級"
-      @comment = "あなたは駆け出しの水族館マニアです。全国にはまだまだあなたの知らない世界が？"
-    elsif @numi<30 then
-      @score = "マグロ級"
-      @comment = "あなたはそこそこの水族館マニアです。もう趣味の一つですね！この調子！"
-    elsif @numi<50 then
-      @score = "シャチ級"
-      @comment = "あなたはかなりの水族館マニアです。旅行に行ったら水族館に行ってるタチですか？"
-    elsif @numi<100 then
-      @score = "ジンベエザメ級"
-      @comment = "あなたはプロ級の水族館マニアです。目指せ！水族館マスター！"
-    elsif @numi<120 then
-      @score = "シロナガスクジラ級"
-      @comment = "あなたは本物の水族館マニアです。もはやどこ行ったことないんですか！！"
-    end
+    @num = "%03d" % @num
   end
 
 end
