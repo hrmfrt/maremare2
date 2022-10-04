@@ -1,6 +1,6 @@
 
 <div class="section-region">
-  <div>北海道</div>
+  <h2>北海道</h2>
   <% @hokkaido.each do |hokkaido| %>
     <%= check_box_tag "check",true,false,class:"checks"%>
     <%= hokkaido.name%><br>
@@ -8,7 +8,7 @@
 </div>
 
 <div class="section-region">
-  <div>東北</div>
+  <h2>東北</h2>
   <% @tohoku.each do |tohoku| %>
     <%= check_box_tag "check",true,false,class:"checks"%>
     <%= tohoku.name%><br>
@@ -16,7 +16,7 @@
 </div>
 
 <div class="section-region">
-  <div>関東</div>
+  <h2>関東</h2>
   <% @kanto.each do |kanto| %>
     <%= check_box_tag "check",true,false,class:"checks"%>
     <%= kanto.name%><br>
@@ -24,7 +24,7 @@
 </div>
 
 <div class="section-region">
-  <div>中部</div>
+  <h2>中部</h2>
   <% @chubu.each do |chubu| %>
     <%= check_box_tag "check",true,false,class:"checks"%>
     <%= chubu.name%><br>
@@ -32,7 +32,7 @@
 </div>
 
 <div class="section-region">
-  <div>関西</div>
+  <h2>関西</h2>
   <% @kansai.each do |kansai| %>
     <%= check_box_tag "check",true,false,class:"checks" %>
     <%= kansai.name%><br>
@@ -40,7 +40,7 @@
 </div>
 
 <div class="section-region">
-  <div>中国・四国</div>
+  <h2>中国・四国</h2>
   <% @chusikoku.each do |chusikoku| %>
     <%= check_box_tag "check",true,false,class:"checks"%>
     <%= chusikoku.name%><br>
@@ -49,7 +49,7 @@
 
 
 <div class="section-region">
-  <div>九州</div>
+  <h2>九州</h2>
   <% @kyusyu.each do |kyusyu| %>
     <%= check_box_tag "check",true,false,class:"checks"%>
     <%= kyusyu.name%><br>
@@ -57,7 +57,10 @@
 </div>
 <button id="btn" type="button">制覇レベル測定</button>
 
+<!--
 <input type="submit" value="SENT">
+-->
+
 
 <script>
 //チェックボックスを取得する

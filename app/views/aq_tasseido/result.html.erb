@@ -3,21 +3,21 @@
 <%= stylesheet_link_tag "maremare_aquarium/slick.css", media: "all", 'data-turbolinks-track': "reload" %>
 <%= stylesheet_link_tag "maremare_aquarium/slick-theme.css", media: "all", 'data-turbolinks-track': "reload" %>
 <%= stylesheet_link_tag "maremare_aquarium/main.css", media: "all", 'data-turbolinks-track': "reload" %>
-
+<%= stylesheet_link_tag "maremare_aquarium/header.css", media: "all", 'data-turbolinks-track': "reload" %>
 
         <%= render partial: "./maremare_aquarium/header" %>
        <div id="wrapper">
             <%= render partial: "./maremare_aquarium/sidebar" %>
             <!--ここからメイン-->
             <div id="main">
-
+            <h1>水族館マニア度<br><br>チェッカー！！！</h1>
                 <!--クリックしたら画像が表示されるところ-->
                 <section id="main_area">
                     <%=image_tag"tasseido_resize/tasseido_"+@num+".jpg", class:"result"%>
 
                     <style>
                         .result{
-                            width: 80%;
+                            width: 95%;
                         }
 
                     </style>

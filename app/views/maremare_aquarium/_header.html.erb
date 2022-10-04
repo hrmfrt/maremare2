@@ -1,29 +1,41 @@
 <header>
-    <ul class="header_for_pc">
-        <div class="header logo_area">
-            <a class="page_rogo" href="top"><%=image_tag"title.png"%></a>
-        </div>
-        <div class="header link_area gnav">
-            <li class="btn"><%= link_to "いきもの紹介", top_path, {class:"link-btn link-radius"}%></li>
-            <li class="btn"><%= link_to "いきものたち", top_path, {class:"link-btn link-radius"}%></li>
-            <li class="btn"><%= link_to "コラム", "https://maremare-aquarium.sumomo.ne.jp/", {class:"link-btn link-radius"}%></li>
-            <li class="btn"><%= link_to "お知らせ", information_path, {class:"link-btn link-radius"}%></li>
-            <li class="btn"><%= link_to "運営者", "https://maremare-aquarium.sumomo.ne.jp/?page_id=102", {class:"link-btn link-radius"}%></li>
-            </ul>
-        </div>
-    </ul>
 
-    <div class="menu_button header_for_mobile"><span>m</span></div>
-    <nav class="nav">
-        <ul>
+      <nav class="pc-nav">
+         <div class="header logo_area">
+            <a class="page_logo" href="top"><%=image_tag"title.png"%></a>
+         </div>
+         <ul class="link_area">
+            <li><%= link_to "いきもの紹介", top_path, {class:"link-btn link-radius"}%></li>
+            <li><%= link_to "水族館達成度！", aq_tasseido_path, {class:"link-btn link-radius"}%></li>
+            <li><%= link_to "コラム", "https://maremare-aquarium.sumomo.ne.jp/", {class:"link-btn link-radius"}%></li>
+            <li><%= link_to "お知らせ", information_path, {class:"link-btn link-radius"}%></li>
+            <li><%= link_to "運営者", "https://maremare-aquarium.sumomo.ne.jp/?page_id=102", {class:"link-btn link-radius"}%></li>
+         </ul>
+      </nav>
+
+
+      <nav class="sp-nav">
+
+         <ul>
             <li><%= link_to "いきもの紹介", top_path%></li>
-            <li><%= link_to "いきものたち", top_path%></li>
+            <li><%= link_to "水族館達成度！", aq_tasseido_path%></li>
             <li><%= link_to "コラム", "https://maremare-aquarium.sumomo.ne.jp/"%></li>
             <li><%= link_to "お知らせ", information_path%></li>
             <li><%= link_to "運営者", "https://maremare-aquarium.sumomo.ne.jp/?page_id=102"%></li>
-        </ul>
-    </nav>
+         </ul>
+      </nav>
+      <div id="hamburger">
+         <span></span>
+      </div>
 
 
-
+  <script>
+   $(function() {
+      const hum = $('#hamburger, .close')
+      const nav = $('.sp-nav')
+      hum.on('click', function(){
+         nav.toggleClass('toggle');
+      });
+   });
+   </script>
 </header>

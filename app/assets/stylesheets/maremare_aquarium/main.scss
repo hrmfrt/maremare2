@@ -18,7 +18,7 @@ body {
 
 a {
     color: #333;
-    
+
 }
 
 a:visited {
@@ -26,7 +26,7 @@ a:visited {
 }
 
 a:hover {
-    background-color:transparent;
+    background-color: transparent;
     font-weight: 700;
     text-decoration: none;
 }
@@ -34,7 +34,12 @@ a:hover {
 
 
 /* チャプター：マージン */
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: 0;
 }
 
@@ -57,140 +62,64 @@ img {
 
 #main h3 {
     font-size: 16px;
-    height:23px;
+    height: 23px;
     border-left: solid 3px #fa9786;
     padding: 0px 7px 5px 8px;
-    margin-left:20px;
+    margin-left: 20px;
 }
 
 /* チャプター：ヘッダー */
 
-.header_for_mobile{
-    display:none;
+.header_for_mobile {
+    display: none;
 }
 
 header {
     width: 1100px;
-    height:80px;
+    height: 80px;
     margin: 0 auto;
-    background-color:#FFFFFF;
-    margin-top:10px;
+    background-color: #FFFFFF;
+    margin-top: 10px;
     margin-bottom: 10px;
-    padding:0 auto;
+    padding: 0 auto;
 }
 
 
 /*リンクボタン部分のCSS*/
 
-.header{
-    float:left;
-}
-.logo_area{
-    width:400px;
-    height:80px;
-    padding-top:5px;
-    padding-left: 30px;
+
+.poke_pic {
+    margin: 0 0 50px;
 }
 
-.link_area{
-    width: 700px;
-    height:80px;
-    display: flex;
-    padding-top:45px;
-    padding-bottom:10px;
-    padding-right:0px;
-    padding-left:30px
-}
-
-.link_area li{
-    width:20%;
-
-}
-
-header ul{
-    width:1100px;
-    height:80px;
-    list-style:none;
-    padding:0;
-}
-
-.btn{    
-    text-align: center;
-}
-
-header ul li {
-     
-    height:40px;
-    width:100%;
-    margin-right: 2%;
-  
-}
-
-
-header .logo{
-    width:100%;
-    background-color: #CC9999;
-}
-
-
-
-
-header .link-btn{
-    width:110px;
-    height:25px;
-    text-align: center;
-    color: #fff;
-    background-image: url(./background.jpeg);
-    border-radius: 100vh;
-
-}
-.page_logo{
-    width:100%;
-    height:100%;
-}
-
-.logo_area img{
-    width:360px;
-    height:70px;
+.poke_pic img {
+    width: 100%;
+    height: 30vw;
     object-fit: cover;
 }
 
-header a {
-    display: block;
-    text-decoration:none;
-    padding: 4px 5px;
-    font-size:14px;
-
+.poke_pic .slick-next {
+    right: 20px;
+    z-index: 99;
 }
 
-
-header ul li :hover{
-  color: #fff;
-  background: #f56500;
+.poke_pic .slick-prev {
+    left: 15px;
+    z-index: 100;
 }
-
-a.btn--radius {
-   border-radius: 100vh;
-}
-
-
-.poke_pic { margin: 0 0 50px;}
-.poke_pic img { width: 100%; height: 30vw; object-fit:cover;}
-.poke_pic .slick-next { right: 20px; z-index: 99;}
-.poke_pic .slick-prev { left: 15px; z-index: 100;}
 
 /* チャプター：メインビジュアル */
 
 /* ポケモンのカルーセル*/
 #main_visual {
-    width:1100px;
-    background-color:black;
+    width: 1100px;
+    background-color: black;
     margin: 0 auto;
 }
 
-.poke_pic{
-   width:100%;
-   margin: 0 auto;
+.poke_pic {
+    width: 100%;
+    margin: 0 auto;
 
 }
 
@@ -199,17 +128,17 @@ a.btn--radius {
     width: 1100px;
     margin: 0 auto;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     margin-bottom: 10px;
-    padding-top:7px;
+    padding-top: 7px;
 }
 
 #main {
     width: 800px;
-    margin-left:10px;
+    margin-left: 10px;
     background-color: #FFFFFF;
     border-radius: 1vh;
-    padding:10px
+    padding: 10px
 }
 
 
@@ -218,84 +147,89 @@ a.btn--radius {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 html {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 62.5%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 62.5%;
 }
 
 
 
-.pic-category{
+.pic-category {
     font-size: 17px;
-    font-weight:bold ;
-    
+    font-weight: bold;
+
 }
 
 
 
 /*動物のボタン*/
 .pic-button {
-    display      : inline-block;
-    width:130px;
-    height:130px;
-    border-radius: 50%;                  /* 角丸 */
-    box-shadow   : 6px 6px 3px #666666;  /* 影の設定 */
-    cursor       : pointer;              /* カーソル形状 */
-    transition   : .3s;                  /* なめらか変化 */
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    /* 角丸 */
+    box-shadow: 6px 6px 3px #666666;
+    /* 影の設定 */
+    cursor: pointer;
+    /* カーソル形状 */
+    transition: .3s;
+    /* なめらか変化 */
 }
 
 .pic-button:hover {
-    box-shadow   : none;                 /* 影の設定 */
-                     /* 角丸 */
+    box-shadow: none;
+    /* 影の設定 */
+    /* 角丸 */
 }
 
 
 /* チャプター：メインエリア */
 
-#main_area h2{
-    width:90%px;
+#main_area h2 {
+    width: 90%px;
 }
 
 
-.main_area{
-    margin-bottom:30px;
+.main_area {
+    margin-bottom: 30px;
 }
 
 
 .lists {
-    display:flex;
-    flex-wrap:wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
-.point{
-    width:33%;
+.point {
+    width: 33%;
 
 }
 
-.point figure{
-    width:33%;
-    height:130px;
-    
+.point figure {
+    width: 33%;
+    height: 130px;
+
 
 }
 
 .point img {
-    width:200px;
-    height:120px;
-    object-fit:cover;
-    margin-left:25px;
-    margin-top:55px;
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    margin-left: 25px;
+    margin-top: 55px;
 }
 
-.point p{
-    width:60%;
-    margin:auto;
+.point p {
+    width: 60%;
+    margin: auto;
 
 }
 
@@ -320,13 +254,13 @@ html {
 }
 
 /* チャプター：サイドバー */
-#instagram-embed-0{
-    min-width:100px !important;
+#instagram-embed-0 {
+    min-width: 100px !important;
 }
 
 #sidebar {
     width: 280px;
-    background-color:#FFFFFF;
+    background-color: #FFFFFF;
     border-radius: 1vh;
 }
 
@@ -338,15 +272,15 @@ html {
 #side_banner {
     margin-bottom: 30px;
     text-align: center;
-    
+
 
 }
 
 #side_banner h2 {
-    width:80%;
+    width: 80%;
     background-color: #956840;
-    margin:0 auto;
-    margin-top:10px;
+    margin: 0 auto;
+    margin-top: 10px;
     border-radius: 2vh;
     color: #fff;
     padding: 7px;
@@ -354,9 +288,9 @@ html {
     text-align: center;
 }
 
-#side_banner img{
-    width:50%;
-    padding-bottom:20px
+#side_banner img {
+    width: 50%;
+    padding-bottom: 20px
 }
 
 
@@ -402,193 +336,135 @@ footer small {
 
 
 /*パソコン用のレスポンシブデザイン*/
-@media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用*/
-#menu-bg {
-    background-color:#FF0000;
-}
+@media screen and (min-width: 767px) {
+
+    /*ウィンドウ幅が767px以上の場合に適用*/
+
 }
 
 /*タブレット用*/
-@media screen and (max-width: 767px) { /*ウィンドウ幅が最大767pxまでの場合に適用*/
-    #menu-bg {
-    background-color: #FF0000; /*赤色*/
-    }
+@media screen and (max-width: 767px) {
+
+
+
     #main {
-        width:100%;
+        width: 100%;
     }
 
-    #sidebar{
-        display:none;
+    #sidebar {
+        display: none;
     }
 }
 
 /*スマホ用のメディアクエリ*/
-@media screen and (max-width: 479px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
+@media screen and (max-width: 479px) {
+
+    /*ウィンドウ幅が最大479pxまでの場合に適用*/
     #menu-bg {
-    background-color: #00FF00; /*緑色*/
-    width:100%;
+        background-color: #00FF00;
+        /*緑色*/
+        width: 100%;
     }
 
-    body{
-        width:100%;
-    }
-    #main_visual{
-        width:100%;
+    body {
+        width: 100%;
     }
 
-    .header_for_pc{
-        width:100%;
-        display:none;
+    #main_visual {
+        width: 100%;
+        height: 10px;
+        visibility: hidden;
     }
 
-    .header_for_mobile{
-        display:inline;
+
+    #wrapper {
+        width: 100%;
+        margin: 0 auto;
     }
 
-    #wrapper{
-        width:100%;
-        margin:0 auto;
-    }
-    #main{
-        width:93%;
-        margin:auto;
+    #main {
+        width: 93%;
+        margin: auto;
     }
 
-    #sidebar{
-        display:none;
+    #sidebar {
+        display: none;
     }
 
-    .pic-button{
-        width:70px;
-        height:70px;
+    .pic-button {
+        width: 70px;
+        height: 70px;
     }
 
-    .point{
-        width:90%;
+    .point {
+        width: 90%;
     }
 
 
     /* チャプター：メインエリア */
 
-    #main_area h2{
-        width:90%px;
+    #main_area h2 {
+        width: 90%px;
     }
 
-    
 
-    .main_area{
-        margin-bottom:30px;
+
+    .main_area {
+        margin-bottom: 30px;
     }
 
-    #main h3{
-        font-size:13px;
-        height:25px;
-        margin-left:5px;
-        margin-bottom:0px;
-        border-left:solid 3px #fa9786;
-        padding-left:5px;
-    }
-    
-    #main figure{
-        margin:0px;
-        margin-top:15px;
+    #main h3 {
+        font-size: 13px;
+        height: 25px;
+        margin-left: 5px;
+        margin-bottom: 0px;
+        border-left: solid 3px #fa9786;
+        padding-left: 5px;
     }
 
-    #main{
-        margin-bottom:10px;
+    #main figure {
+        margin: 0px;
+        margin-top: 15px;
+    }
+
+    #main {
+        margin-bottom: 10px;
     }
 
     .lists {
-        display:flex;
-        flex-wrap:wrap;
+        display: flex;
+        flex-wrap: wrap;
     }
-    
-    
-    .point{
-        width:80%;
-    
+
+
+    .point {
+        width: 80%;
+
     }
-    
-    .point figure{
-        width:63%;
-        height:130px;
-        
+
+    .point figure {
+        width: 63%;
+        height: 130px;
+
     }
-    
+
     .point img {
-        width:200px;
-        height:120px;
-        object-fit:cover;
-        margin-left:100px;
-        margin-top:5px;
+        width: 200px;
+        height: 120px;
+        object-fit: cover;
+        margin-left: 100px;
+        margin-top: 5px;
     }
-    
-    .point p{
-        width:60%;
-        margin:auto;
-    
+
+    .point p {
+        width: 60%;
+        margin: auto;
+
     }
 
     /*https://qiita.com/NeGI1009/items/2609d30626f3c5c01c46*/
     /****メニュー全体****/
-    header {
-        margin-top:0px;
-        height: 40px;
-        z-index: 1000;
-        position: fixed;
-    }
-    header .nav {
-        position: absolute;
-        top: 100%;
-    }
-    header ul{
-        width:100%;
-    }
-    header li{
-        width:100%;
-    }
 
-
-    header {
-        background-color: rgb(255, 93, 17);
-        color: white;
-        width: 100%;
-    }
-    header .menu_button {
-        border-left: solid 1px white;
-        float: right;
-        width: 70px;
-        height: 100%;
-        text-align: center;
-    }
-    header .menu_button span {
-        line-height: 40px;
-    }
-    header nav {
-        background-color: rgb(255, 94, 0);
-        color: white;
-        width: 100%;
-    }
-
-    header nav ul li{
-        background-color: rgb(255, 94, 0);
-    }
-    header nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-    header nav ul li:first-child {
-        border-top: solid 1px white;
-    }
-    header nav ul li {
-        border-bottom: dotted 1px white;
-        text-align: center;
-        padding: 1em;
-    }
-    main {
-        width: 100%;
-    }
 
 
 }
