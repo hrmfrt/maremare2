@@ -2,48 +2,48 @@
 <div class="section-region">
   <h2>北海道</h2>
   <% @hokkaido.each do |hokkaido| %>
-    <%= check_box_tag "check",true,false,class:"checks"%>
-    <%= hokkaido.name%><br>
+    <%= check_box_tag "check",true,false,id:hokkaido.id, class:"checks"%>
+    <%= label_tag(hokkaido.id,test=hokkaido.name)%><br>
   <%end%>
 </div>
 
 <div class="section-region">
   <h2>東北</h2>
   <% @tohoku.each do |tohoku| %>
-    <%= check_box_tag "check",true,false,class:"checks"%>
-    <%= tohoku.name%><br>
+    <%= check_box_tag "check",true,false,id:tohoku.id, class:"checks"%>
+    <%= label_tag(tohoku.id,test=tohoku.name)%><br>
   <%end%>
 </div>
 
 <div class="section-region">
   <h2>関東</h2>
   <% @kanto.each do |kanto| %>
-    <%= check_box_tag "check",true,false,class:"checks"%>
-    <%= kanto.name%><br>
+    <%= check_box_tag "check",true,false,id:kanto.id, class:"checks"%>
+    <%= label_tag(kanto.id,test=kanto.name)%><br>
   <%end%>
 </div>
 
 <div class="section-region">
   <h2>中部</h2>
   <% @chubu.each do |chubu| %>
-    <%= check_box_tag "check",true,false,class:"checks"%>
-    <%= chubu.name%><br>
+    <%= check_box_tag "check",true,false,id:chubu.id, class:"checks"%>
+    <%= label_tag(chubu.id,test=chubu.name)%><br>
   <%end%>
 </div>
 
 <div class="section-region">
   <h2>関西</h2>
   <% @kansai.each do |kansai| %>
-    <%= check_box_tag "check",true,false,class:"checks" %>
-    <%= kansai.name%><br>
+    <%= check_box_tag "check",true,false,id:kansai.id, class:"checks"%>
+    <%= label_tag(kansai.id,test=kansai.name)%><br>
   <%end%>
 </div>
 
 <div class="section-region">
   <h2>中国・四国</h2>
   <% @chusikoku.each do |chusikoku| %>
-    <%= check_box_tag "check",true,false,class:"checks"%>
-    <%= chusikoku.name%><br>
+    <%= check_box_tag "check",true,false,id:chusikoku.id, class:"checks"%>
+    <%= label_tag(chusikoku.id,test=chusikoku.name)%><br>
   <%end%>
 </div>
 
@@ -51,8 +51,8 @@
 <div class="section-region">
   <h2>九州</h2>
   <% @kyusyu.each do |kyusyu| %>
-    <%= check_box_tag "check",true,false,class:"checks"%>
-    <%= kyusyu.name%><br>
+    <%= check_box_tag "check",true,false,id:kyusyu.id, class:"checks"%>
+    <%= label_tag(kyusyu.id,test=kyusyu.name)%><br>
   <%end%>
 </div>
 <button id="btn" type="button">制覇レベル測定</button>
